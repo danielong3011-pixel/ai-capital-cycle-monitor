@@ -56,6 +56,32 @@ The same dollar appears at several points along the chain: an Nvidia GPU sale is
 a hyperscaler's CapEx. Companies are assigned a role (*spender* or *supplier*) and aggregates sum
 within a role only. Supplier revenue is shown as a ratio to spender CapEx, never added to it.
 
+#### Demand (Module B)
+Segment revenue, segment operating income and backlog are not in SEC's company-facts service, so they are
+read from each filing's full XBRL document, matched by concept and segment or product label
+(`src/ai_capital_cycle/segments.py`), and put through the same quarter, calendar and restatement logic.
+Segment recasts (such as Microsoft's in 2024) are handled by using the latest filed figure for each period.
+
+| Measure | Definition (TTM) |
+|---|---|
+| Cloud revenue | AWS, Google Cloud, Microsoft Intelligent Cloud, Oracle Cloud Infrastructure, CoreWeave (selectable) |
+| Revenue per $ of CapEx | Cloud revenue ÷ the same companies' total CapEx |
+| New revenue per $ of CapEx | (Cloud revenue − cloud revenue a year earlier) ÷ CapEx over the twelve months ending *lag* quarters earlier |
+| New profit per $ of CapEx | Same, with segment operating income: a rough pre-tax incremental return |
+| Backlog | Remaining performance obligations (contracted, not yet recognised) |
+| Backlog ÷ CapEx | Backlog ÷ TTM CapEx |
+
+**Layers of the value chain.** (1) Suppliers: Nvidia's Data Center revenue is the clouds' CapEx.
+(2) Compute providers: part of cloud revenue is AI labs' spending. (3) AI model and application
+companies: their revenue is spending by final customers. The only audited view of layer 3 in the
+filings is Microsoft's disclosure of OpenAI's revenue. Layers are shown side by side and never added up.
+Meta, which sells no cloud services, is shown separately: its AI investment pays off through advertising.
+
+**Caveats.** Microsoft's Intelligent Cloud segment includes server software as well as Azure. Backlog is
+company-wide for Amazon, Alphabet (before 2026), Microsoft (commercial) and Oracle. Because CapEx is
+whole-company, the ratios understate returns on cloud investment alone; their direction over time is the
+signal.
+
 #### Known limitations
 - **Total, not AI-only.** Reported CapEx covers all of a company's investment (Amazon's includes
   retail logistics). No AI share is assumed.

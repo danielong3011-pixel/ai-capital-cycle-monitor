@@ -46,3 +46,35 @@ def test_known_annual_capex(selected):
     assert total("AMZN", "2024-01-01", "2024-12-31") == pytest.approx(83.0, abs=0.1)
     assert total("GOOGL", "2024-01-01", "2024-12-31") == pytest.approx(52.5, abs=0.1)
     assert total("MSFT", "2024-07-01", "2025-06-30") == pytest.approx(64.55, abs=0.1)
+
+
+SEGMENTS = Path(__file__).resolve().parents[1] / "data" / "sec_segments.csv"
+
+
+@pytest.mark.skipif(not SEGMENTS.exists(), reason="no segment snapshot")
+def test_segment_quarters_sum_to_annual_and_known_totals():
+    from ai_capital_cycle.demand import flow_quarters
+    from ai_capital_cycle.segments import load_segments
+
+    seg = load_segments(SEGMENTS)
+    quarters = flow_quarters(seg)
+    flows = seg[seg.start.notna() & seg.form.str.startswith("10-K")]
+    annual = flows[((flows.end - flows.start).dt.days + 1).between(*YEAR_DAYS)]
+    annual = annual.sort_values("filed").drop_duplicates(["series", "start", "end"], keep="last")
+    checked = 0
+    for year in annual.itertuples():
+        q = quarters[(quarters.series == year.series) & (quarters.start >= year.start - pd.Timedelta(days=3))
+                     & (quarters.end <= year.end)]
+        if len(q) != 4:
+            continue
+        checked += 1
+        assert q.value_usd.sum() == pytest.approx(year.value_usd, abs=2e6), (year.series, year.end)
+    assert checked >= 30
+
+    def cal_year(series, year):
+        q = quarters[(quarters.series == series) & (quarters.calendar_quarter.astype(str).str.startswith(str(year)))]
+        assert len(q) == 4
+        return q.value_usd.sum() / 1e9
+
+    assert cal_year("aws_revenue", 2024) == pytest.approx(107.6, abs=0.1)         # Amazon 10-K 2024
+    assert cal_year("google_cloud_revenue", 2024) == pytest.approx(43.2, abs=0.1)  # Alphabet 10-K 2024
