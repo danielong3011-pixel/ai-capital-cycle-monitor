@@ -1,5 +1,8 @@
-streamlit
-plotly
-numpy
-pandas
-scipy
+# Runtime dependencies for Streamlit Community Cloud.
+# The final line installs this repository's own package (src/ai_capital_cycle),
+# which is what makes `import ai_capital_cycle` work in app.py.
+streamlit>=1.46
+plotly>=5.18
+pandas>=2.0
+numpy>=1.24
+.
