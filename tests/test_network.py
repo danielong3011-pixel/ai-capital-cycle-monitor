@@ -52,3 +52,10 @@ def test_filters():
 def test_every_company_has_group_and_short_name():
     from ai_capital_cycle.network import GROUPS, SHORT_NAMES
     assert set(GROUPS) == set(SHORT_NAMES)
+
+
+def test_every_company_has_a_map_colour():
+    from ai_capital_cycle.network import GROUPS
+    from views.map3d import COMPANY_COLORS
+    assert set(COMPANY_COLORS) == set(GROUPS)
+    assert len({c for c, _ in COMPANY_COLORS.values()}) == len(COMPANY_COLORS)

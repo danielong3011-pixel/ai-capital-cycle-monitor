@@ -18,8 +18,29 @@ BUNDLE_COMMIT = "e4ff4f4e77f0e8e266d8519572f2609eb58189a4"
 BUNDLE_URL = ("https://cdn.jsdelivr.net/gh/danielong3011-pixel/ai-capital-cycle-monitor@"
               f"{BUNDLE_COMMIT}/static/map3d.min.js")
 
-GROUP_COLORS = {"cloud": "#2a78d6", "chips": "#eb6834", "ai_lab": "#1baf7a", "ai_user": "#d55181",
-                "investor": "#6250d6"}
+# One colour per company, hand-picked so that companies with a direct deal are clearly
+# different (OKLab distance >= 10.8 for every linked pair) and visible on light and dark.
+PALETTE = {
+    "Nvidia": "#3f9b2c", "OpenAI": "#1c95d4", "Anthropic": "#e0632a", "Microsoft": "#3b4bd1",
+    "Amazon": "#e6a700", "Google": "#d52f47", "CoreWeave": "#9a3fd2", "Oracle": "#b0306a", "Meta": "#e360a9",
+    "Broadcom": "#0e9b88", "AMD": "#6d7310", "TSMC": "#7b5233", "SpaceX": "#55606e", "Intel": "#8c8cf0",
+    "Cerebras": "#c48a8a", "Nebius": "#5fc4d6", "IREN": "#b98bd0", "SoftBank": "#a5c26a",
+}
+
+
+def _luminance(hex_color: str) -> float:
+    rgb = [int(hex_color[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+    rgb = [c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4 for c in rgb]
+    return 0.2126 * rgb[0] + 0.7152 * rgb[1] + 0.0722 * rgb[2]
+
+
+def _label_ink(hex_color: str) -> str:
+    """Black or white, whichever reads better on the ball."""
+    lum = _luminance(hex_color)
+    return "#111111" if (lum + 0.05) / (0.0056 + 0.05) >= (1.05) / (lum + 0.05) else "#ffffff"
+
+
+COMPANY_COLORS = {name: (color, _label_ink(color)) for name, color in PALETTE.items()}
 TYPE_STYLE = {"investment": ("#eda100", "Investment"), "cloud": ("#008300", "Cloud contract"),
               "chips": ("#e34948", "Chip purchase"), "manufacturing": ("#8a8984", "Chip manufacturing")}
 STATUS_LABELS = {"completed": "completed", "announced": "announced", "filed": "in an SEC filing",
@@ -36,7 +57,9 @@ def amount_text(row) -> str:
 def graph_data(deals: pd.DataFrame) -> dict:
     nodes = node_table(deals)
     out_nodes = [{
-        "id": n.company, "short": SHORT_NAMES.get(n.company, n.company), "color": GROUP_COLORS.get(n.group, "#8a8984"),
+        "id": n.company, "short": SHORT_NAMES.get(n.company, n.company),
+        "color": COMPANY_COLORS.get(n.company, ("#8a8984", "#ffffff"))[0],
+        "ink": COMPANY_COLORS.get(n.company, ("#8a8984", "#ffffff"))[1],
         "val": int(n.connections) ** 2,
         "info": f"{n.company} · {GROUP_LABELS.get(n.group, n.group)} · {n.connections} connections, {n.deals} deals",
     } for n in nodes.itertuples()]
@@ -48,13 +71,14 @@ def graph_data(deals: pd.DataFrame) -> dict:
         k = seen.get(key, 0)
         seen[key] = k + 1
         reciprocal = (d.receiver, d.payer) in pairs
-        color, label = TYPE_STYLE[d.type]
+        label = TYPE_STYLE[d.type][1]
         links.append({
-            "id": i, "source": d.payer, "target": d.receiver, "color": color,
+            "id": i, "source": d.payer, "target": d.receiver,
+            "color": COMPANY_COLORS.get(d.payer, ("#8a8984", ""))[0],   # line takes the payer's colour
             "width": 0.35 if pd.isna(d.amount_usd_bn) else 0.35 + 0.55 * math.log10(1 + d.amount_usd_bn),
             "curv": (0.25 + 0.15 * k) if (reciprocal or k) else 0.0,
             "rot": (k * math.pi / 2),
-            "info": {"title": f"{d.payer} → {d.receiver}", "type": label, "amount": amount_text(d),
+            "info": {"title": f"{d.payer} pays {d.receiver}", "type": label, "amount": amount_text(d),
                      "when": "" if pd.isna(d.announced) else d.announced.strftime("%b %Y"),
                      "status": STATUS_LABELS[d.status], "what": d.what, "url": d.source_url},
         })
@@ -63,12 +87,9 @@ def graph_data(deals: pd.DataFrame) -> dict:
 
 
 def legend_html() -> str:
-    groups = "".join(f'<span class="key"><i class="dot" style="background:{c}"></i>{GROUP_LABELS[g]}</span>'
-                     for g, c in GROUP_COLORS.items())
-    types = "".join(f'<span class="key"><i class="bar" style="background:{c}"></i>{label}</span>'
-                    for c, label in TYPE_STYLE.values())
-    return (f'<div class="legend">{groups}</div><div class="legend">{types}'
-            '<span class="key">moving dots = direction of money · thicker = bigger amount</span></div>')
+    return ('<div class="legend"><span class="key">Each company has its own colour. A line takes the colour of the '
+            'company paying, and its arrowhead and moving dots point at the company being paid. '
+            'Thicker line = bigger amount.</span></div>')
 
 
 STYLE = """
@@ -142,18 +163,19 @@ SCRIPT = """
     .nodeThreeObjectExtend(true)
     .nodeThreeObject(n => {
       const r = Math.cbrt(n.val) * 3;
-      const t = new Map3D.SpriteText(n.short, Math.max(2.6, r * 0.5), "#ffffff");
-      t.fontWeight = "700"; t.strokeWidth = 1.2; t.strokeColor = "rgba(0,0,0,0.55)";
+      const t = new Map3D.SpriteText(n.short, Math.max(2.6, r * 0.5), n.ink);
+      t.fontWeight = "700"; t.strokeWidth = n.ink === "#ffffff" ? 1.2 : 0; t.strokeColor = "rgba(0,0,0,0.5)";
       t.material.depthTest = false; t.material.depthWrite = false; t.renderOrder = 10;
       return t;
     })
-    .linkColor(l => alpha(l.color, on(l) ? 0.85 : 0.08))
+    .linkColor(l => alpha(l.color, on(l) ? 0.75 : 0.06))
     .linkWidth(l => on(l) ? l.width * (active ? 1.8 : 1) : l.width * 0.6)
     .linkCurvature("curv").linkCurveRotation("rot")
-    .linkDirectionalArrowLength(l => on(l) ? 3.5 : 0).linkDirectionalArrowRelPos(1)
-    .linkDirectionalArrowColor(l => alpha(l.color, 0.95))
-    .linkDirectionalParticles(l => on(l) ? 2 : 0).linkDirectionalParticleWidth(l => 0.9 + l.width)
-    .linkDirectionalParticleSpeed(0.006).linkDirectionalParticleColor(l => l.color)
+    .linkDirectionalArrowLength(l => on(l) ? 6 + 2 * l.width : 0).linkDirectionalArrowRelPos(1)
+    .linkDirectionalArrowResolution(12).linkDirectionalArrowColor(l => l.color)
+    .linkDirectionalParticles(l => on(l) ? 4 : 0).linkDirectionalParticleWidth(l => 1.6 + l.width)
+    .linkDirectionalParticleSpeed(0.007).linkDirectionalParticleResolution(8)
+    .linkDirectionalParticleColor(l => l.color)
     .linkLabel(l => esc(l.info.title + " · " + l.info.type + " · " + l.info.amount))
     .warmupTicks(80).cooldownTicks(120);
 
