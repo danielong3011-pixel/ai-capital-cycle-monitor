@@ -62,3 +62,11 @@ def test_extract_series_matches_ignoring_prefixes_and_consolidation_axis():
     assert out.loc["google_cloud_operating_income", "value_usd"] == 8.81e9
     assert out.loc["google_cloud_backlog", "value_usd"] == 513.9e9
     assert len(out) == 3
+
+
+def test_wildcard_axis_match():
+    from ai_capital_cycle.segments import _matches, _d
+    dims = frozenset({"RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2026-01-01"})
+    assert _matches(dims, (_d("RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=*"),))
+    assert not _matches(dims, (frozenset(),))
+    assert _matches(frozenset(), (frozenset(),))

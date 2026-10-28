@@ -60,6 +60,11 @@ SERIES: tuple[Series, ...] = (
            COMPUTE_LAYER, OPERATING_INCOME, (_d("StatementBusinessSegmentsAxis=GoogleCloudMember"),)),
     Series("google_cloud_backlog", "GOOGL", "Google Cloud backlog", "instant", "backlog", COMPUTE_LAYER, BACKLOG,
            (_d("StatementBusinessSegmentsAxis=GoogleCloudMember"),)),
+    Series("google_backlog", "GOOGL", "Alphabet backlog (total)", "instant", "backlog", COMPUTE_LAYER, BACKLOG,
+           (frozenset(),), "Company-wide; mostly Google Cloud. Cloud-only backlog is disclosed from 2026."),
+    Series("amazon_backlog", "AMZN", "Amazon backlog (total)", "instant", "backlog", COMPUTE_LAYER, BACKLOG,
+           (frozenset(), _d("RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=*")),
+           "Company-wide remaining performance obligations; Amazon says these relate mainly to AWS."),
     Series("msft_intelligent_cloud_revenue", "MSFT", "Microsoft Intelligent Cloud revenue", "flow", "revenue",
            COMPUTE_LAYER, REVENUE, (_d("StatementBusinessSegmentsAxis=IntelligentCloudMember"),),
            "Segment includes server software (SQL Server, Windows Server) as well as Azure."),
@@ -103,6 +108,15 @@ SERIES: tuple[Series, ...] = (
 SERIES_BY_NAME = {s.name: s for s in SERIES}
 
 
+def spec_fingerprint(ticker: str) -> str:
+    """Short hash of a company's series definitions; a change triggers re-extraction."""
+    import hashlib
+
+    specs = sorted(repr((s.name, s.kind, s.concepts, tuple(sorted(map(sorted, s.dims))))) for s in SERIES
+                   if s.ticker == ticker)
+    return hashlib.sha256("|".join(specs).encode()).hexdigest()[:12]
+
+
 def _local_dims(dims: str) -> frozenset:
     """'us-gaap:StatementBusinessSegmentsAxis=amzn:AwsMember' -> {'StatementBusinessSegmentsAxis=AwsMember'}."""
     if not dims:
@@ -112,6 +126,16 @@ def _local_dims(dims: str) -> frozenset:
         axis, _, member = pair.partition("=")
         pairs.append(f"{axis.rsplit(':', 1)[-1]}={member.rsplit(':', 1)[-1]}")
     return frozenset(pairs) - IGNORED_DIMS
+
+
+def _matches(dims: frozenset, accepted: tuple[frozenset, ...]) -> bool:
+    """Exact match, where an accepted pair 'Axis=*' matches any member of that axis."""
+    for option in accepted:
+        if len(option) != len(dims):
+            continue
+        if all(any(p == d or (p.endswith("=*") and d.startswith(p[:-1])) for d in dims) for p in option):
+            return True
+    return False
 
 
 def extract_series(instance: pd.DataFrame, ticker: str) -> pd.DataFrame:
@@ -124,7 +148,7 @@ def extract_series(instance: pd.DataFrame, ticker: str) -> pd.DataFrame:
     df["local_dims"] = df["dims"].map(_local_dims)
     out = []
     for spec in specs:
-        hit = df["local_concept"].isin(spec.concepts) & df["local_dims"].isin(spec.dims)
+        hit = df["local_concept"].isin(spec.concepts) & df["local_dims"].map(lambda d: _matches(d, spec.dims))
         hit &= df["start"].isna() if spec.kind == "instant" else df["start"].notna()
         sub = df[hit]
         if not sub.empty:

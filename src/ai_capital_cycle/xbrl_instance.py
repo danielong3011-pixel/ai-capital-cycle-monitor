@@ -95,12 +95,24 @@ def instance_filename(primary_document: str) -> str:
     return re.sub(r"\.htm$", "_htm.xml", primary_document)
 
 
-def recent_periodic_filings(submissions: dict, forms=("10-K", "10-Q"), since: str = "2019-01-01") -> pd.DataFrame:
-    """Periodic filings listed in a company's submissions JSON (most recent block only)."""
-    recent = submissions.get("filings", {}).get("recent", {})
-    frame = pd.DataFrame({k: recent.get(k, []) for k in
-                          ["accessionNumber", "form", "filingDate", "reportDate", "primaryDocument",
-                           "isInlineXBRL"]})
+FILING_FIELDS = ["accessionNumber", "form", "filingDate", "reportDate", "primaryDocument", "isInlineXBRL"]
+SUBMISSIONS_PAGE = "https://data.sec.gov/submissions/{name}"
+
+
+def _filing_block(block: dict) -> pd.DataFrame:
+    return pd.DataFrame({k: block.get(k, []) for k in FILING_FIELDS})
+
+
+def recent_periodic_filings(submissions: dict, forms=("10-K", "10-Q"), since: str = "2019-01-01",
+                            extra_pages: list[dict] | None = None) -> pd.DataFrame:
+    """Periodic filings from a company's submissions JSON.
+
+    The main JSON lists only the most recent ~1,000 filings of all types; older ones
+    are in additional pages (``filings.files``), passed here as ``extra_pages``.
+    """
+    blocks = [_filing_block(submissions.get("filings", {}).get("recent", {}))]
+    blocks += [_filing_block(page) for page in (extra_pages or [])]
+    frame = pd.concat(blocks, ignore_index=True).drop_duplicates("accessionNumber")
     frame = frame[frame["form"].isin(forms) & (frame["filingDate"] >= since)]
     return frame.reset_index(drop=True)
 
