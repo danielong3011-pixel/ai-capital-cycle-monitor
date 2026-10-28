@@ -49,7 +49,7 @@ BACKLOG = {
     "ORCL": "oracle_backlog",
     "CRWV": "coreweave_backlog",
 }
-DEFAULT_PROVIDERS = ["AMZN", "GOOGL", "MSFT"]
+DEFAULT_PROVIDERS = ["AMZN", "GOOGL", "MSFT", "ORCL", "CRWV"]
 
 
 def _latest_filed(frame: pd.DataFrame, keys: list[str]) -> pd.DataFrame:
@@ -175,8 +175,16 @@ def aggregate_providers(table: pd.DataFrame, providers: list[str], lag: int = 4)
     # their growth would reflect changes in coverage rather than in the business.
     agg.loc[agg["income_coverage"] != len(providers), "cloud_operating_income"] = float("nan")
     agg.loc[agg["backlog_coverage_n"] != len(providers), "backlog"] = float("nan")
-    out = add_demand_ratios(agg, by=None, lag=lag)
-    return out.drop(columns=["income_revenue"])
+    out = add_demand_ratios(agg, by=None, lag=lag).drop(columns=["income_revenue"])
+    # Profit measures from the providers that report cloud operating income (a matched
+    # sample: their own revenue and CapEx), so the measure exists even when others don't.
+    reporting = [p for p in providers if p in CLOUD_OPERATING_INCOME]
+    out["profit_basis"] = ", ".join(reporting)
+    if reporting and len(reporting) < len(providers):
+        matched = aggregate_providers(table, reporting, lag=lag).set_index("calendar_quarter")
+        for column in ["cloud_operating_margin", "incremental_income_per_capex"]:
+            out[column] = out["calendar_quarter"].map(matched[column])
+    return out
 
 
 def layer_view(flow_ttm: pd.DataFrame, cloud_aggregate: pd.DataFrame) -> pd.DataFrame:

@@ -46,7 +46,7 @@ def render() -> None:
         st.info("Segment data has not been downloaded yet.")
         return
     st.markdown("Is the CapEx from the *Capital cycle* tab matched by revenue from paying customers? "
-                "Cloud segment revenue, profit and contracted backlog from SEC filings.")
+                "Cloud sales, profit and signed future contracts, from SEC filings.")
 
     with st.expander("Settings"):
         providers = st.multiselect("Cloud providers", list(CLOUD_REVENUE), default=DEFAULT_PROVIDERS,
@@ -87,15 +87,16 @@ def render() -> None:
           else f"${row['incremental_revenue_per_capex']:.2f}",
           f"Growth in yearly cloud revenue ÷ CapEx over the twelve months ending {lag} quarters earlier.")
     _tile(c4, "New profit per $ of CapEx", _fmt_pct(row["incremental_income_per_capex"]),
-          "Growth in yearly cloud operating income ÷ lagged CapEx: a rough pre-tax return on new investment. "
-          "Only shown when every selected provider reports segment operating income.")
+          "Growth in yearly cloud profit ÷ the CapEx from a year earlier: a rough return on new investment. "
+          f"Based on {row['profit_basis']}, the providers that report cloud profit separately.")
     c5, c6 = st.columns(2)
-    _tile(c5, "Contracted backlog", _fmt_bn(row["backlog"]),
-          "Remaining performance obligations: revenue under signed contracts not yet recognised. "
-          "Company-wide figures, not cloud-only, except where noted.",
+    _tile(c5, "Signed future contracts", _fmt_bn(row["backlog"]),
+          "Money customers have already agreed to pay in future contracts but haven't been charged yet. "
+          "Accountants call this 'backlog'. Whole-company figures, not cloud-only.",
           _fmt_pct(row["backlog_growth"], signed=True) + " y/y")
-    _tile(c6, "Backlog ÷ CapEx", "n/a" if pd.isna(row["backlog_coverage"]) else f"{row['backlog_coverage']:.1f}×",
-          "Contracted future revenue per dollar of the last twelve months' CapEx.")
+    _tile(c6, "Future contracts per $ of CapEx", "n/a" if pd.isna(row["backlog_coverage"])
+          else f"${row['backlog_coverage']:.2f}",
+          "Signed future contracts for every $1 spent on CapEx in the last twelve months.")
 
     x = _q(agg["calendar_quarter"])
 
@@ -110,7 +111,7 @@ def render() -> None:
                                  mode="lines", line=dict(width=2, color=PALETTE[2]), hovertemplate="$%{y:,.0f}B"))
     st.plotly_chart(_layout(fig, "Cloud revenue vs CapEx", "USD B, TTM"), width="stretch", config=PLOT_CONFIG)
     st.caption("When CapEx rises above the revenue it is meant to support, the investment is running ahead of "
-               "current demand. That can be rational if backlog shows the demand is contracted.")
+               "current demand. That can still make sense if customers have signed contracts for the future.")
 
     # ---- 2. Incremental returns ----------------------------------------------
     fig = go.Figure()
@@ -147,10 +148,10 @@ def render() -> None:
                                      marker=dict(color=COLOR[ticker], line=dict(width=1, color="rgba(255,255,255,0.9)")),
                                      hovertemplate="$%{y:,.0f}B"))
         fig.update_layout(barmode="stack", bargap=0.25)
-        st.plotly_chart(_layout(fig, "Contracted backlog by company", "USD B"), width="stretch", config=PLOT_CONFIG)
-        st.caption("Backlog is revenue customers have contracted but not yet paid for. It is company-wide (Microsoft's "
-                   "commercial figure includes Microsoft 365; Oracle's includes software support). A large share can "
-                   "come from a few customers, such as AI labs, whose ability to pay depends on their own funding.")
+        st.plotly_chart(_layout(fig, "Signed future contracts by company", "USD B"), width="stretch", config=PLOT_CONFIG)
+        st.caption("Money customers have agreed to pay but haven't been charged yet. These are whole-company figures "
+                   "(Microsoft's include Office subscriptions, Oracle's include software support). A big share can come "
+                   "from a few AI companies, and whether they pay depends on them raising money.")
 
     # ---- 5. Value-chain layers -----------------------------------------------------
     st.subheader("Along the value chain")
@@ -208,16 +209,16 @@ def render() -> None:
         "Op. margin": latest["cloud_operating_margin"],
         "Company CapEx $B": latest["capex"] / B,
         "New rev. per $ CapEx": latest["incremental_revenue_per_capex"],
-        "Backlog $B": latest["backlog"] / B,
-        "Backlog ÷ CapEx": latest["backlog_coverage"],
+        "Future contracts $B": latest["backlog"] / B,
+        "Contracts per $ CapEx": latest["backlog_coverage"],
     }), hide_index=True, width="stretch", column_config={
         "Cloud revenue $B": st.column_config.NumberColumn(format="%.1f"),
         "Company CapEx $B": st.column_config.NumberColumn(format="%.1f"),
-        "Backlog $B": st.column_config.NumberColumn(format="%.0f"),
+        "Future contracts $B": st.column_config.NumberColumn(format="%.0f"),
         "Growth": st.column_config.NumberColumn(format="percent"),
         "Op. margin": st.column_config.NumberColumn(format="percent"),
         "New rev. per $ CapEx": st.column_config.NumberColumn(format="$%.2f"),
-        "Backlog ÷ CapEx": st.column_config.NumberColumn(format="%.1f×"),
+        "Contracts per $ CapEx": st.column_config.NumberColumn(format="$%.2f"),
     })
     notes = [f"**{s.label}**: {s.note}" for s in SERIES if s.note]
     with st.expander("Series notes"):

@@ -68,8 +68,8 @@ Segment recasts (such as Microsoft's in 2024) are handled by using the latest fi
 | Revenue per $ of CapEx | Cloud revenue ÷ the same companies' total CapEx |
 | New revenue per $ of CapEx | (Cloud revenue − cloud revenue a year earlier) ÷ CapEx over the twelve months ending *lag* quarters earlier |
 | New profit per $ of CapEx | Same, with segment operating income: a rough pre-tax incremental return |
-| Backlog | Remaining performance obligations (contracted, not yet recognised) |
-| Backlog ÷ CapEx | Backlog ÷ TTM CapEx |
+| Signed future contracts | Money customers have agreed to pay but haven't been charged yet (accounting term: backlog, or remaining performance obligations) |
+| Future contracts per $ of CapEx | Signed future contracts ÷ TTM CapEx |
 
 **Layers of the value chain.** (1) Suppliers: Nvidia's Data Center revenue is the clouds' CapEx.
 (2) Compute providers: part of cloud revenue is AI labs' spending. (3) AI model and application
@@ -77,7 +77,7 @@ companies: their revenue is spending by final customers. The only audited view o
 filings is Microsoft's disclosure of OpenAI's revenue. Layers are shown side by side and never added up.
 Meta, which sells no cloud services, is shown separately: its AI investment pays off through advertising.
 
-**Caveats.** Microsoft's Intelligent Cloud segment includes server software as well as Azure. Backlog is
+**Caveats.** Microsoft's Intelligent Cloud segment includes server software as well as Azure. Signed future contracts are
 company-wide for Amazon, Alphabet (before 2026), Microsoft (commercial) and Oracle. Because CapEx is
 whole-company, the ratios understate returns on cloud investment alone; their direction over time is the
 signal.

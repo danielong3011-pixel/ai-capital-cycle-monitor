@@ -21,7 +21,7 @@ from each filing's full XBRL document:
   Oracle Cloud Infrastructure and CoreWeave.
 - Revenue per dollar of CapEx, and new revenue and new operating profit per dollar of lagged CapEx
   (a rough incremental return), with an adjustable lag.
-- Contracted backlog (remaining performance obligations) and backlog ÷ CapEx.
+- Signed future contracts (accounting term: backlog) and future contracts per $ of CapEx.
 - Value-chain layers side by side, never summed: Nvidia Data Center revenue (supplier), cloud revenue
   (compute providers) and OpenAI's revenue as disclosed in Microsoft's 10-K (AI model company).
 - Meta shown separately as AI used in-house: ad revenue growth against CapEx growth.

@@ -73,3 +73,13 @@ def test_aggregate_requires_every_provider_and_marks_partial_income_nan():
     assert np.isnan(row.cloud_operating_income)   # Google Cloud income not supplied here
     assert np.isnan(row.backlog)                  # nor Google backlog
     assert pd.Period("2024Q3") not in agg.index   # no TTM revenue yet
+
+
+def test_profit_measure_uses_matched_sample_of_reporting_providers():
+    t = _setup()
+    agg = aggregate_providers(t, ["AMZN", "GOOGL"]).set_index("calendar_quarter")
+    row = agg.loc[pd.Period("2025Q4")]
+    assert row.profit_basis == "AMZN, GOOGL"
+    assert np.isnan(row.incremental_income_per_capex)        # Google has no income data in the fixture
+    agg_amzn = aggregate_providers(t, ["AMZN"]).set_index("calendar_quarter")
+    assert agg_amzn.loc[pd.Period("2025Q4")].incremental_income_per_capex == pytest.approx(8 / 40)
