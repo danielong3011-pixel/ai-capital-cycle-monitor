@@ -13,6 +13,7 @@ from ai_capital_cycle.demand import (BACKLOG, CLOUD_REVENUE, DEFAULT_PROVIDERS, 
 from ai_capital_cycle.periods import build_panel
 from ai_capital_cycle.sec import load_facts
 from ai_capital_cycle.segments import SERIES, SERIES_BY_NAME, load_segments
+from views import network_view
 from views.capital_cycle import (COLOR, PALETTE, PLOT_CONFIG, B, _filing_url, _fmt_bn, _fmt_pct, _layout, _q)
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -178,6 +179,8 @@ def render() -> None:
                "of cloud revenue is AI labs' spending. Adding the lines together would count the same dollars twice. "
                "OpenAI's figure is from Microsoft's 10-K disclosure of its investee, the only audited view of "
                "the end of the chain in the filings.")
+
+    network_view.render()
 
     # ---- 6. Internal use: Meta ----------------------------------------------------------
     if "meta_ads_revenue" in flow_ttm:
