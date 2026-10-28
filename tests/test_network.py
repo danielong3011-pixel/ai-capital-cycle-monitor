@@ -47,3 +47,8 @@ def test_filters():
     assert filter_deals(d, include_reported=False).payer.tolist() == ["Microsoft"]
     assert filter_deals(d, include_background=False).payer.tolist() == ["Meta"]
     assert filter_deals(d, types=["chips"]).payer.tolist() == ["Microsoft"]
+
+
+def test_every_company_has_group_and_short_name():
+    from ai_capital_cycle.network import GROUPS, SHORT_NAMES
+    assert set(GROUPS) == set(SHORT_NAMES)

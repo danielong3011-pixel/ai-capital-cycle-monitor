@@ -39,6 +39,13 @@ GROUPS = {
     "Meta": "ai_user",
     "SoftBank": "investor",
 }
+# Short label drawn on each company's ball (tickers for listed companies).
+SHORT_NAMES = {
+    "Nvidia": "NVDA", "AMD": "AMD", "Broadcom": "AVGO", "Intel": "INTC", "TSMC": "TSM", "Cerebras": "Cerebras",
+    "Microsoft": "MSFT", "Amazon": "AMZN", "Google": "GOOGL", "Oracle": "ORCL", "CoreWeave": "CRWV",
+    "Nebius": "NBIS", "IREN": "IREN", "SpaceX": "SpaceX", "OpenAI": "OpenAI", "Anthropic": "Anthropic",
+    "Meta": "META", "SoftBank": "SoftBank",
+}
 GROUP_LABELS = {"chips": "Chips", "cloud": "Cloud / compute", "ai_lab": "AI labs", "ai_user": "Uses AI in-house",
                 "investor": "Investor"}
 
