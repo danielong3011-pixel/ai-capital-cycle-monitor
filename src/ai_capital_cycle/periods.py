@@ -8,7 +8,9 @@ Steps
 2. ``discrete_quarters`` 10-Q cash-flow statements are year-to-date cumulative, so
                          discrete quarters are derived by differencing consecutive
                          cumulative values that share a start date. Directly reported
-                         three-month values are preferred where they exist.
+                         three-month values are preferred where they exist. If a
+                         fiscal year then has an annual value and exactly three of
+                         its quarters, the fourth is the annual value less the three.
 3. ``calendarize``       fiscal quarters are mapped to the calendar quarter that
                          contains their midpoint (e.g. Nvidia's quarter ending late
                          January covers Nov-Jan and maps to calendar Q4).
@@ -70,8 +72,18 @@ def discrete_quarters(selected: pd.DataFrame) -> pd.DataFrame:
     out = []
     for (ticker, concept), group in df.groupby(["ticker", "concept"], sort=False):
         by_end: dict[pd.Timestamp, dict] = {}
+        # Guard against a known filer tagging error: a full-year amount tagged with a
+        # three-month context. A "quarter" equal to the annual value ending the same day
+        # is discarded (the true quarter is then derived from cumulative values).
+        long_values = group[group.days >= YEAR_DAYS[0]].groupby("end")["value_usd"].apply(list).to_dict()
+
+        def mistagged(row) -> bool:
+            return any(abs(row.value_usd - v) <= 0.001 * abs(v) for v in long_values.get(row.end, []) if v)
+
         # (a) directly reported three-month values
         for row in group[(group.days >= lo) & (group.days <= hi)].itertuples(index=False):
+            if mistagged(row):
+                continue
             by_end[row.end] = dict(start=row.start, end=row.end, value_usd=row.value_usd, tag=row.tag,
                                    accession=row.accession, filed=row.filed, method="reported")
         # (b) differences of consecutive cumulative values sharing a start date
@@ -88,6 +100,29 @@ def discrete_quarters(selected: pd.DataFrame) -> pd.DataFrame:
                                        value_usd=values[i] - values[i - 1], tag=later.tag,
                                        accession=later.accession, filed=later.filed,
                                        method="derived (YTD difference)")
+        # (c) one missing quarter in a fiscal year = annual value - the other three
+        # Only 10-K fiscal years: some 10-Qs carry trailing-twelve-month figures under a
+        # different definition (e.g. Amazon's free-cash-flow tables).
+        annual = group[(group.days >= YEAR_DAYS[0]) & (group.days <= YEAR_DAYS[1])
+                       & group["form"].astype(str).str.startswith("10-K")]
+        for year in annual.itertuples(index=False):
+            inside = sorted((r for r in by_end.values()
+                             if r["start"] >= year.start - pd.Timedelta(days=3) and r["end"] <= year.end),
+                            key=lambda r: r["end"])
+            if len(inside) != 3:
+                continue
+            bounds = [year.start - pd.Timedelta(days=1)] + [r["end"] for r in inside] + [year.end]
+            starts = [year.start] + [r["start"] for r in inside] + [year.end + pd.Timedelta(days=1)]
+            gaps = [(bounds[i] + pd.Timedelta(days=1), starts[i + 1] - pd.Timedelta(days=1))
+                    for i in range(4)]
+            gaps = [(s, e) for s, e in gaps if lo <= (e - s).days + 1 <= hi]
+            if len(gaps) != 1 or gaps[0][1] in by_end:
+                continue
+            start, end = gaps[0]
+            by_end[end] = dict(start=start, end=end,
+                               value_usd=year.value_usd - sum(r["value_usd"] for r in inside),
+                               tag=year.tag, accession=year.accession, filed=year.filed,
+                               method="derived (annual less other quarters)")
         for record in by_end.values():
             out.append(dict(ticker=ticker, concept=concept, **record))
     result = pd.DataFrame(out)

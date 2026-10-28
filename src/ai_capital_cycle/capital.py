@@ -95,6 +95,12 @@ def aggregate_spenders(ttm: pd.DataFrame, tickers: list[str] | None = None) -> p
     for column in ["revenue", "depreciation_amortization"]:
         agg[column] = agg[column].where(grouped[column].count() == agg["companies"])
     agg["complete"] = agg["companies"] == len(expected)
+    # Matched-sample CapEx / D&A: both sides restricted to companies reporting D&A,
+    # because some filers (e.g. Microsoft) do not tag quarterly D&A consistently.
+    matched = valid.dropna(subset=["depreciation_amortization"]).groupby("calendar_quarter")
+    agg["capex_to_depreciation_matched"] = _ratio(matched["capex"].sum(),
+                                                  matched["depreciation_amortization"].sum())
+    agg["depreciation_coverage"] = matched["ticker"].nunique()
     agg = agg.reset_index()
     agg = add_ratios(agg)
     agg["capex_yoy"] = _yoy(agg.assign(capex=agg["capex"].where(agg["complete"])), "capex", by=None)
@@ -132,7 +138,7 @@ def summary_signals(aggregate: pd.DataFrame) -> dict[str, float]:
     if row is None:
         return {}
     keys = ["capex", "operating_cash_flow", "free_cash_flow", "reinvestment_rate", "capex_yoy",
-            "capital_intensity", "capex_to_depreciation", "funding_gap", "net_debt_issuance",
+            "capital_intensity", "capex_to_depreciation_matched", "funding_gap", "net_debt_issuance",
             "debt_funding_share", "capex_hhi"]
     return {k: float(row[k]) if pd.notna(row[k]) else np.nan for k in keys} | {
         "calendar_quarter": str(row["calendar_quarter"])}
