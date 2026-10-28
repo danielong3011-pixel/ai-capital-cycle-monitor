@@ -4,5 +4,6 @@
 streamlit>=1.46
 plotly>=5.18
 pandas>=2.0
+requests>=2.31
 numpy>=1.24
 .

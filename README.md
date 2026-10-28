@@ -2,16 +2,52 @@
 
 An independent, open-source Python research prototype exploring the financial sustainability of AI infrastructure investment. **This is not a bubble-timing or market-crash prediction tool.**
 
-## Current capabilities
-- Transparent project DCF and numerical break-even growth calculation.
-- Growth/discount-rate sensitivity table.
-- Industry observation CSV import, strict validation and year-level aggregation.
-- AI-attributed CapEx shown separately from reported total CapEx, with an explicit assumption field.
-- Reproducible Monte Carlo NPV scenarios with adjustable uncertainty.
-- Streamlit interactive dashboard and automated pytest tests.
+## What it does
+
+**Capital cycle (Module A)** uses real SEC filings to track the companies building AI compute:
+Microsoft, Amazon, Alphabet, Meta, Oracle and CoreWeave, with Nvidia as a supplier cross-check.
+- Trailing-twelve-month CapEx, operating cash flow, free cash flow, reinvestment rate, capital
+  intensity, CapEx/depreciation, funding gap, net debt issuance and debt-funded share of CapEx.
+- Fiscal quarters (June, May and January year-ends) aligned to calendar quarters; discrete quarters
+  derived from year-to-date cash-flow statements.
+- Coverage-aware aggregates: a quarter only counts once every selected company has filed.
+- No double counting along the value chain: supplier revenue is never added to spender CapEx.
+- Point-in-time view: rebuild any reading from only the filings available on a past date.
+- Full provenance: every quarterly figure links to the SEC filing it came from.
+
+**Demand (Module B)** asks whether that CapEx is backed by customer demand, using segment data read
+from each filing's full XBRL document:
+- Cloud revenue, growth and operating margin for AWS, Google Cloud, Microsoft Intelligent Cloud,
+  Oracle Cloud Infrastructure and CoreWeave.
+- Revenue per dollar of CapEx, and new revenue and new operating profit per dollar of lagged CapEx
+  (a rough incremental return), with an adjustable lag.
+- Signed future contracts (accounting term: backlog) and future contracts per $ of CapEx.
+- Value-chain layers side by side, never summed: Nvidia Data Center revenue (supplier), cloud revenue
+  (compute providers) and OpenAI's revenue as disclosed in Microsoft's 10-K (AI model company).
+- Meta shown separately as AI used in-house: ad revenue growth against CapEx growth.
+
+**Project model** (version 0.1) is an illustrative single-project DCF with sensitivity and
+Monte Carlo scenarios, plus a CSV aggregator for your own documented observations.
+
+## Data
+
+`data/sec_facts.csv` is a snapshot of SEC EDGAR XBRL company facts, refreshed every Monday by
+`.github/workflows/refresh-sec-data.yml`. SEC requires a contact in the User-Agent: the workflow
+reads it from the repository secret `SEC_USER_AGENT`. To refresh locally:
+
+```bash
+SEC_USER_AGENT="Your Name you@example.com" python scripts/refresh_sec_data.py
+```
+
+The company list and the XBRL tags used for each line item are in
+`src/ai_capital_cycle/universe.py`; the segment series are defined in `src/ai_capital_cycle/segments.py` and
+downloaded incrementally into `data/sec_segments.csv` by `scripts/refresh_segment_data.py`. The full method is in the app's **Method & data** tab.
 
 ## Important limitations
-**The bundled `data/industry_template.csv` is fictional.** No live financial data is bundled and no output should be presented as a current industry estimate. Reported corporate CapEx is not identical to AI CapEx. Summing company-level capital spending across a carefully chosen universe is not the same as measuring the entire industry. The model is an illustrative investment project, not an empirically calibrated aggregate industry valuation. Simulation frequencies are conditional on selected assumptions, not actual event probabilities. Additional research must address capex timing, hardware replacement, taxes, terminal value, supply-chain double counting, industry coverage and point-in-time source records.
+Reported CapEx is total company investment, not AI-only (Amazon's includes retail logistics).
+Finance-lease and off-balance-sheet data-centre capacity is not in cash CapEx. Private labs and
+non-US companies are not yet covered. Figures are nominal USD. The project model and
+`data/industry_template.csv` are illustrative. Nothing here is investment advice.
 
 ## Run locally or in GitHub Codespaces
 
@@ -34,10 +70,10 @@ python -m pytest -q
 `ai_capex_share` must be in [0, 1]. It is an estimate unless a credible disclosure directly supports it. Record full source URLs and reporting periods in a future data-provenance version. Never treat an illustrative share as a reported fact.
 
 ## Planned next steps
-1. SEC EDGAR ingestion with filing URLs, accession IDs, units, and as-of timestamps.
-2. Coverage-aware industry aggregates and an end-customer revenue ledger that avoids double counting.
-3. Incremental ROIC, infrastructure asset cohorts and replacement capital modelling.
-4. Historical validation with vintage data and stress-test transmission to equities.
+1. Customer concentration: how much backlog depends on a few AI labs and how those labs are funded.
+2. Incremental ROIC, asset cohorts and replacement-cycle modelling.
+3. Wider coverage (semiconductors, neoclouds, 20-F filers) and finance-lease-adjusted CapEx.
+4. Historical validation with point-in-time vintages and stress tests.
 
 ## License
 See `LICENSE`.

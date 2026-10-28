@@ -1,0 +1,42 @@
+name: Refresh SEC data
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # Mondays 06:17 UTC
+  workflow_dispatch:
+  push:
+    branches: ["feature/**"]
+    paths: ["scripts/refresh_*.py", "src/ai_capital_cycle/sec.py", "src/ai_capital_cycle/universe.py",
+            "src/ai_capital_cycle/segments.py", "src/ai_capital_cycle/xbrl_instance.py"]
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pandas requests
+      - name: Download SEC facts
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: python scripts/refresh_sec_data.py
+      - name: Download segment and backlog series
+        env:
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        run: python scripts/refresh_segment_data.py
+      - name: Commit snapshot if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/sec_facts.csv data/sec_facts_meta.json data/sec_segments.csv data/sec_segment_filings.csv
+          if git diff --cached --quiet -- data/sec_facts.csv data/sec_segments.csv data/sec_segment_filings.csv; then
+            echo "No new filings."
+          else
+            git commit -m "Refresh SEC data snapshot"
+            git push
+          fi
