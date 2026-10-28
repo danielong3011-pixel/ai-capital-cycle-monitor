@@ -1,0 +1,3420 @@
+{
+ "MSFT": {
+  "filings_listed": 24,
+  "samples": [
+   {
+    "form": "10-Q",
+    "filed": "2026-04-29",
+    "report": "2026-03-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526191507/msft-20260331_htm.xml",
+    "status": 200,
+    "facts": 1315,
+    "axes_by_concept": {
+     "msft:ContractWithCustomerLiabilityRevenueDeferred": [
+      ""
+     ],
+     "msft:ContractWithCustomerLiabilityRevenueRecognizedIncludingAdditions": [
+      ""
+     ],
+     "msft:DepreciationAmortizationAndOther": [
+      ""
+     ],
+     "us-gaap:AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment": [
+      "",
+      "us-gaap:LeaseContractualTermAxis"
+     ],
+     "us-gaap:Depreciation": [
+      ""
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:PaymentsToAcquireInvestments": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "",
+      "msft:ProductsOrServicesSecondaryCategorizationAxis",
+      "srt:ProductOrServiceAxis",
+      "srt:StatementGeographicalAxis",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      "",
+      "srt:MajorCustomersAxis"
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligationPercentage": [
+      "srt:MajorCustomersAxis;us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis",
+      "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 15089000000.0,
+      "d": 90,
+      "dims": "srt:ProductOrServiceAxis=us-gaap:ProductMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 67797000000.0,
+      "d": 90,
+      "dims": "srt:ProductOrServiceAxis=us-gaap:ServiceOtherMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 82886000000.0,
+      "d": 90,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 38398000000.0,
+      "d": 90,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 633000000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 627000000000.0,
+      "d": null,
+      "dims": "srt:MajorCustomersAxis=msft:CommercialCustomersMember"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligationPercentage",
+      "v": 0.3,
+      "d": null,
+      "dims": "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2026-04-01"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligationPercentage",
+      "v": 0.25,
+      "d": null,
+      "dims": "srt:MajorCustomersAxis=msft:CommercialCustomersMember;us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2026-04-01"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 35013000000.0,
+      "d": 90,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:ProductivityAndBusinessProcessesMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 20973000000.0,
+      "d": 90,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:ProductivityAndBusinessProcessesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 34681000000.0,
+      "d": 90,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:IntelligentCloudMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 13753000000.0,
+      "d": 90,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:IntelligentCloudMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 13192000000.0,
+      "d": 90,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:MorePersonalComputingMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 3672000000.0,
+      "d": 90,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:MorePersonalComputingMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 42336000000.0,
+      "d": 90,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 40550000000.0,
+      "d": 90,
+      "dims": "srt:StatementGeographicalAxis=us-gaap:NonUsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 32592000000.0,
+      "d": 90,
+      "dims": "srt:ProductOrServiceAxis=msft:ServerProductsAndCloudServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 25593000000.0,
+      "d": 90,
+      "dims": "srt:ProductOrServiceAxis=msft:MicrosoftThreeSixFiveCommercialProductsAndCloudServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 5341000000.0,
+      "d": 90,
+      "dims": "srt:ProductOrServiceAxis=msft:GamingMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 4832000000.0,
+      "d": 90,
+      "dims": "srt:ProductOrServiceAxis=msft:LinkedInCorporationMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 4041000000.0,
+      "d": 90,
+      "dims": "srt:ProductOrServiceAxis=msft:WindowsAndDevicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 3808000000.0,
+      "d": 90,
+      "dims": "srt:ProductOrServiceAxis=msft:SearchAdvertisingMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 2297000000.0,
+      "d": 90,
+      "dims": "srt:ProductOrServiceAxis=msft:MicrosoftThreeSixFiveConsumerProductsAndCloudServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 2292000000.0,
+      "d": 90,
+      "dims": "srt:ProductOrServiceAxis=msft:DynamicsProductsAndCloudServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 2087000000.0,
+      "d": 90,
+      "dims": "srt:ProductOrServiceAxis=msft:EnterpriseAndPartnerServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 3000000.0,
+      "d": 90,
+      "dims": "srt:ProductOrServiceAxis=msft:OtherProductsAndServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 54500000000.0,
+      "d": 90,
+      "dims": "msft:ProductsOrServicesSecondaryCategorizationAxis=msft:MicrosoftCloudMember"
+     }
+    ]
+   },
+   {
+    "form": "10-K",
+    "filed": "2026-07-29",
+    "report": "2026-06-30",
+    "url": "https://www.sec.gov/Archives/edgar/data/789019/000119312526323660/msft-20260630_htm.xml",
+    "status": 200,
+    "facts": 1467,
+    "axes_by_concept": {
+     "msft:ContractWithCustomerLiabilityRevenueDeferred": [
+      ""
+     ],
+     "msft:ContractWithCustomerLiabilityRevenueRecognizedIncludingAdditions": [
+      ""
+     ],
+     "msft:DeferredTaxLiabilitiesDepreciation": [
+      ""
+     ],
+     "msft:DepreciationAmortizationAndOther": [
+      ""
+     ],
+     "us-gaap:AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment": [
+      "",
+      "us-gaap:LeaseContractualTermAxis"
+     ],
+     "us-gaap:Depreciation": [
+      ""
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:PaymentsToAcquireInvestments": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "",
+      "msft:ProductsOrServicesSecondaryCategorizationAxis",
+      "srt:ProductOrServiceAxis",
+      "srt:ScheduleOfEquityMethodInvestmentEquityMethodInvesteeNameAxis",
+      "srt:StatementGeographicalAxis",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      "",
+      "srt:MajorCustomersAxis"
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligationPercentage": [
+      "srt:MajorCustomersAxis;us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis",
+      "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 64696000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=us-gaap:ProductMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 267143000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=us-gaap:ServiceOtherMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 331839000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 155237000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 24100000000.0,
+      "d": 365,
+      "dims": "srt:ScheduleOfEquityMethodInvestmentEquityMethodInvesteeNameAxis=msft:OpenAIGlobalLlcMember"
+     },
+     {
+      "c": "msft:ContractWithCustomerLiabilityRevenueDeferred",
+      "v": 194184000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "msft:ContractWithCustomerLiabilityRevenueRecognizedIncludingAdditions",
+      "v": 185737000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 684000000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 678000000000.0,
+      "d": null,
+      "dims": "srt:MajorCustomersAxis=msft:CommercialCustomersMember"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligationPercentage",
+      "v": 0.3,
+      "d": null,
+      "dims": "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2026-07-01"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligationPercentage",
+      "v": 0.3,
+      "d": null,
+      "dims": "srt:MajorCustomersAxis=msft:CommercialCustomersMember;us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2026-07-01"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 139996000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:ProductivityAndBusinessProcessesMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 83879000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:ProductivityAndBusinessProcessesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 137791000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:IntelligentCloudMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 56972000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:IntelligentCloudMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 54052000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:MorePersonalComputingMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 14386000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:MorePersonalComputingMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 170794000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 161045000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=us-gaap:NonUsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 129425000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=msft:ServerProductsAndCloudServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 101997000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=msft:MicrosoftThreeSixFiveCommercialProductsAndCloudServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 21790000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=msft:XBOXMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 19817000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=msft:LinkedInCorporationMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 17084000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=msft:WindowsAndDevicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 15176000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=msft:SearchAdvertisingMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 9175000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=msft:MicrosoftThreeSixFiveConsumerProductsAndCloudServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 9006000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=msft:DynamicsProductsAndCloudServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 8260000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=msft:EnterpriseAndPartnerServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 109000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=msft:OtherProductsAndServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 214400000000.0,
+      "d": 365,
+      "dims": "msft:ProductsOrServicesSecondaryCategorizationAxis=msft:MicrosoftCloudMember"
+     }
+    ]
+   },
+   {
+    "form": "10-K",
+    "filed": "2024-07-30",
+    "report": "2024-06-30",
+    "url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024087843/msft-20240630_htm.xml",
+    "status": 200,
+    "facts": 1453,
+    "axes_by_concept": {
+     "msft:ContractWithCustomerLiabilityRevenueDeferred": [
+      ""
+     ],
+     "msft:ContractWithCustomerLiabilityRevenueRecognizedIncludingAdditions": [
+      ""
+     ],
+     "msft:DeferredTaxLiabilitiesDepreciation": [
+      ""
+     ],
+     "msft:DepreciationAmortizationAndOther": [
+      ""
+     ],
+     "us-gaap:AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment": [
+      "",
+      "us-gaap:LeaseContractualTermAxis"
+     ],
+     "us-gaap:BusinessAcquisitionsProFormaRevenue": [
+      "us-gaap:BusinessAcquisitionAxis"
+     ],
+     "us-gaap:BusinessCombinationProFormaInformationRevenueOfAcquireeSinceAcquisitionDateActual": [
+      "us-gaap:BusinessAcquisitionAxis"
+     ],
+     "us-gaap:Depreciation": [
+      ""
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:PaymentsToAcquireInvestments": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "",
+      "msft:ProductsOrServicesSecondaryCategorizationAxis",
+      "srt:ProductOrServiceAxis",
+      "srt:StatementGeographicalAxis",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      "",
+      "srt:MajorCustomersAxis"
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligationPercentage": [
+      "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 64773000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=us-gaap:ProductMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 180349000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=us-gaap:ServiceOtherMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 245122000000.0,
+      "d": 366,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 109433000000.0,
+      "d": 366,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:BusinessCombinationProFormaInformationRevenueOfAcquireeSinceAcquisitionDateActual",
+      "v": 5729000000.0,
+      "d": 366,
+      "dims": "us-gaap:BusinessAcquisitionAxis=msft:ActivisionBlizzardIncMember"
+     },
+     {
+      "c": "us-gaap:BusinessAcquisitionsProFormaRevenue",
+      "v": 247442000000.0,
+      "d": 366,
+      "dims": "us-gaap:BusinessAcquisitionAxis=msft:ActivisionBlizzardIncMember"
+     },
+     {
+      "c": "msft:ContractWithCustomerLiabilityRevenueDeferred",
+      "v": 148701000000.0,
+      "d": 366,
+      "dims": ""
+     },
+     {
+      "c": "msft:ContractWithCustomerLiabilityRevenueRecognizedIncludingAdditions",
+      "v": 142330000000.0,
+      "d": 366,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 275000000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 269000000000.0,
+      "d": null,
+      "dims": "srt:MajorCustomersAxis=msft:CommercialCustomersMember"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligationPercentage",
+      "v": 0.45,
+      "d": null,
+      "dims": "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2024-07-01"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 77728000000.0,
+      "d": 366,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:ProductivityAndBusinessProcessesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 105362000000.0,
+      "d": 366,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:IntelligentCloudMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 62032000000.0,
+      "d": 366,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:MorePersonalComputingMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 40540000000.0,
+      "d": 366,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:ProductivityAndBusinessProcessesMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 49584000000.0,
+      "d": 366,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:IntelligentCloudMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 19309000000.0,
+      "d": 366,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=msft:MorePersonalComputingMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 124704000000.0,
+      "d": 366,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 120418000000.0,
+      "d": 366,
+      "dims": "srt:StatementGeographicalAxis=us-gaap:NonUsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 97726000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=msft:ServerProductsAndCloudServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 54875000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=msft:OfficeProductsAndCloudServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 23244000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=msft:WindowsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 21503000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=msft:GamingMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 16372000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=msft:LinkedInCorporationMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 12576000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=msft:SearchAndNewsAdvertisingMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 7594000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=msft:EnterpriseAndPartnerServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 6481000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=msft:DynamicsProductsAndCloudServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 4706000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=msft:DevicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 45000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=msft:OtherProductsAndServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 137400000000.0,
+      "d": 366,
+      "dims": "msft:ProductsOrServicesSecondaryCategorizationAxis=msft:MicrosoftCloudMember"
+     }
+    ]
+   }
+  ]
+ },
+ "AMZN": {
+  "filings_listed": 24,
+  "samples": [
+   {
+    "form": "10-Q",
+    "filed": "2026-07-31",
+    "report": "2026-06-30",
+    "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630_htm.xml",
+    "status": 200,
+    "facts": 1152,
+    "axes_by_concept": {
+     "amzn:PaymentsToAcquireEquitySecurities": [
+      "us-gaap:FinancialInstrumentAxis;us-gaap:SubsequentEventTypeAxis"
+     ]
+    },
+    "facts_at_period_end": []
+   },
+   {
+    "form": "10-K",
+    "filed": "2026-02-06",
+    "report": "2025-12-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231_htm.xml",
+    "status": 200,
+    "facts": 1257,
+    "axes_by_concept": {
+     "amzn:PaymentsToAcquireBusinessesNetOfCashAcquiredAndPaymentsToAcquireNonmarketableSecuritiesAndOther": [
+      ""
+     ],
+     "us-gaap:AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:ContractWithCustomerLiabilityRevenueRecognized": [
+      ""
+     ],
+     "us-gaap:Depreciation": [
+      "",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:DepreciationDepletionAndAmortization": [
+      "",
+      "us-gaap:ChangeInAccountingEstimateByTypeAxis"
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:PaymentsToAcquireAvailableForSaleSecuritiesDebt": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireMarketableSecurities": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireProductiveAssets": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "",
+      "srt:ProductOrServiceAxis",
+      "srt:StatementGeographicalAxis",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 296266000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=us-gaap:ProductMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 420658000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=us-gaap:ServiceMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 716924000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 79975000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:ContractWithCustomerLiabilityRevenueRecognized",
+      "v": 17400000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 244000000000.0,
+      "d": null,
+      "dims": "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2026-01-01"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 426305000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=amzn:NorthAmericaSegmentMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 29619000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=amzn:NorthAmericaSegmentMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 161894000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=amzn:InternationalSegmentMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 4750000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=amzn:InternationalSegmentMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 128725000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=amzn:AmazonWebServicesSegmentMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 45606000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=amzn:AmazonWebServicesSegmentMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 269287000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=amzn:OnlineStoresMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 22561000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=amzn:PhysicalStoresMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 172162000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=amzn:ThirdPartySellerServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 68635000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=us-gaap:AdvertisingMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 49619000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=amzn:SubscriptionServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 128725000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=amzn:AmazonWebServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 5935000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=amzn:OtherServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 489657000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 45900000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=country:DE"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 43212000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=country:GB"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 30688000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=country:JP"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 107467000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=us-gaap:NonUsMember"
+     }
+    ]
+   },
+   {
+    "form": "10-K",
+    "filed": "2024-02-02",
+    "report": "2023-12-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872424000008/amzn-20231231_htm.xml",
+    "status": 200,
+    "facts": 1188,
+    "axes_by_concept": {
+     "us-gaap:OperatingIncomeLoss": [
+      "srt:StatementScenarioAxis;us-gaap:ChangeInAccountingEstimateByTypeAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 3100000000.0,
+      "d": 366,
+      "dims": "srt:StatementScenarioAxis=srt:ScenarioForecastMember;us-gaap:ChangeInAccountingEstimateByTypeAxis=amzn:ChangeInPropertyAndEquipmentUsefulLifeMember"
+     }
+    ]
+   }
+  ]
+ },
+ "GOOGL": {
+  "filings_listed": 13,
+  "samples": [
+   {
+    "form": "10-Q",
+    "filed": "2026-07-23",
+    "report": "2026-06-30",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630_htm.xml",
+    "status": 200,
+    "facts": 1586,
+    "axes_by_concept": {
+     "goog:AccruedRevenueShare": [
+      ""
+     ],
+     "us-gaap:ContractWithCustomerLiabilityRevenueRecognized": [
+      ""
+     ],
+     "us-gaap:CostOfRevenue": [
+      ""
+     ],
+     "us-gaap:Depreciation": [
+      ""
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:PaymentsToAcquireMarketableSecurities": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireOtherInvestments": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAccumulatedDepreciationAndAmortization": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetBeforeAccumulatedDepreciationAndAmortization": [
+      "us-gaap:PropertyPlantAndEquipmentByTypeAxis"
+     ],
+     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "srt:ProductOrServiceAxis;us-gaap:StatementBusinessSegmentsAxis",
+      "srt:StatementGeographicalAxis",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:RevenueNotFromContractWithCustomer": [
+      ""
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      "",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:Revenues": [
+      "",
+      "us-gaap:DerivativeInstrumentRiskAxis;us-gaap:ReclassificationOutOfAccumulatedOtherComprehensiveIncomeAxis;us-gaap:StatementEquityComponentsAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "goog:AccruedRevenueShare",
+      "v": 10599000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 119796000000.0,
+      "d": 91,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:CostOfRevenue",
+      "v": 45943000000.0,
+      "d": 91,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 40770000000.0,
+      "d": 91,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 63271000000.0,
+      "d": 91,
+      "dims": "srt:ProductOrServiceAxis=goog:GoogleSearchOtherMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 11055000000.0,
+      "d": 91,
+      "dims": "srt:ProductOrServiceAxis=goog:YouTubeAdvertisingRevenueMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 7303000000.0,
+      "d": 91,
+      "dims": "srt:ProductOrServiceAxis=goog:GoogleNetworkMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 81629000000.0,
+      "d": 91,
+      "dims": "srt:ProductOrServiceAxis=goog:GoogleAdvertisingRevenueMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 12911000000.0,
+      "d": 91,
+      "dims": "srt:ProductOrServiceAxis=goog:SubscriptionsPlatformsAndDevicesRevenueMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 94540000000.0,
+      "d": 91,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 24768000000.0,
+      "d": 91,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=goog:GoogleCloudMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 382000000.0,
+      "d": 91,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=us-gaap:AllOtherSegmentsMember"
+     },
+     {
+      "c": "us-gaap:RevenueNotFromContractWithCustomer",
+      "v": 106000000.0,
+      "d": 91,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 60846000000.0,
+      "d": 91,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 32501000000.0,
+      "d": 91,
+      "dims": "srt:StatementGeographicalAxis=us-gaap:EMEAMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 19317000000.0,
+      "d": 91,
+      "dims": "srt:StatementGeographicalAxis=srt:AsiaPacificMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 7026000000.0,
+      "d": 91,
+      "dims": "srt:StatementGeographicalAxis=goog:AmericasExcludingUnitedStatesMember"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 519500000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 513900000000.0,
+      "d": null,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=goog:GoogleCloudMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 97000000.0,
+      "d": 91,
+      "dims": "us-gaap:DerivativeInstrumentRiskAxis=us-gaap:ForeignExchangeContractMember;us-gaap:ReclassificationOutOfAccumulatedOtherComprehensiveIncomeAxis=us-gaap:ReclassificationOutOfAccumulatedOtherComprehensiveIncomeMember;us-gaap:StatementEquityComponentsAxis=us-gaap:AccumulatedGainLossNetCashFlowHedgeParentMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 39544000000.0,
+      "d": 91,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 8814000000.0,
+      "d": 91,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleCloudMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": -1799000000.0,
+      "d": 91,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=us-gaap:AllOtherSegmentsMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": -5789000000.0,
+      "d": 91,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:CorporateNonSegmentMember"
+     }
+    ]
+   },
+   {
+    "form": "10-K",
+    "filed": "2026-02-05",
+    "report": "2025-12-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231_htm.xml",
+    "status": 200,
+    "facts": 1508,
+    "axes_by_concept": {
+     "goog:AccruedRevenueShare": [
+      ""
+     ],
+     "goog:IncreaseDecreaseInAccruedRevenueShare": [
+      ""
+     ],
+     "us-gaap:ContractWithCustomerLiabilityRevenueRecognized": [
+      ""
+     ],
+     "us-gaap:CostOfRevenue": [
+      ""
+     ],
+     "us-gaap:Depreciation": [
+      ""
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:PaymentsToAcquireMarketableSecurities": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireOtherInvestments": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAccumulatedDepreciationAndAmortization": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetBeforeAccumulatedDepreciationAndAmortization": [
+      "us-gaap:PropertyPlantAndEquipmentByTypeAxis"
+     ],
+     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "srt:ProductOrServiceAxis;us-gaap:StatementBusinessSegmentsAxis",
+      "srt:StatementGeographicalAxis",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:RevenueNotFromContractWithCustomer": [
+      ""
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      ""
+     ],
+     "us-gaap:Revenues": [
+      "",
+      "us-gaap:ReclassificationOutOfAccumulatedOtherComprehensiveIncomeAxis;us-gaap:StatementEquityComponentsAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "goog:AccruedRevenueShare",
+      "v": 10864000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 402836000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:CostOfRevenue",
+      "v": 162535000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 129039000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "goog:IncreaseDecreaseInAccruedRevenueShare",
+      "v": 899000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 224532000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=goog:GoogleSearchOtherMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 40367000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=goog:YouTubeAdvertisingRevenueMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 29792000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=goog:GoogleNetworkMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 294691000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=goog:GoogleAdvertisingRevenueMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 48030000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=goog:SubscriptionsPlatformsAndDevicesRevenueMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 342721000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 58705000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=goog:GoogleCloudMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 1537000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=us-gaap:AllOtherSegmentsMember"
+     },
+     {
+      "c": "us-gaap:RevenueNotFromContractWithCustomer",
+      "v": -127000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 194229000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 117152000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=us-gaap:EMEAMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 67680000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=srt:AsiaPacificMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 23902000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=goog:AmericasExcludingUnitedStatesMember"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 242800000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:ContractWithCustomerLiabilityRevenueRecognized",
+      "v": 4600000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": -233000000.0,
+      "d": 365,
+      "dims": "us-gaap:ReclassificationOutOfAccumulatedOtherComprehensiveIncomeAxis=us-gaap:ReclassificationOutOfAccumulatedOtherComprehensiveIncomeMember;us-gaap:StatementEquityComponentsAxis=us-gaap:AccumulatedGainLossNetCashFlowHedgeParentMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 139404000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 13910000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleCloudMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": -7515000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=us-gaap:AllOtherSegmentsMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": -16760000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:CorporateNonSegmentMember"
+     }
+    ]
+   },
+   {
+    "form": "10-K",
+    "filed": "2024-01-31",
+    "report": "2023-12-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204424000022/goog-20231231_htm.xml",
+    "status": 200,
+    "facts": 1306,
+    "axes_by_concept": {
+     "goog:AccruedRevenueShare": [
+      ""
+     ],
+     "goog:IncreaseDecreaseInAccruedRevenueShare": [
+      ""
+     ],
+     "goog:RestructuringAndRelatedCostAcceleratedRentAndDepreciation": [
+      "us-gaap:RestructuringCostAndReserveAxis"
+     ],
+     "us-gaap:AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:ContractWithCustomerLiabilityRevenueRecognized": [
+      ""
+     ],
+     "us-gaap:CostOfRevenue": [
+      ""
+     ],
+     "us-gaap:Depreciation": [
+      "",
+      "us-gaap:ChangeInAccountingEstimateByTypeAxis"
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:PaymentsToAcquireMarketableSecurities": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireOtherInvestments": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "",
+      "srt:ProductOrServiceAxis;us-gaap:StatementBusinessSegmentsAxis",
+      "srt:StatementGeographicalAxis",
+      "us-gaap:DerivativeInstrumentRiskAxis;us-gaap:ReclassificationOutOfAccumulatedOtherComprehensiveIncomeAxis;us-gaap:StatementEquityComponentsAxis",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      ""
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "goog:AccruedRevenueShare",
+      "v": 8876000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 307394000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:CostOfRevenue",
+      "v": 133332000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 84293000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "goog:IncreaseDecreaseInAccruedRevenueShare",
+      "v": 482000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 175033000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=goog:GoogleSearchOtherMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 31510000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=goog:YouTubeAdvertisingRevenueMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 31312000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=goog:GoogleNetworkMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 237855000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=goog:GoogleAdvertisingRevenueMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 34688000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=goog:SubscriptionsPlatformsAndDevicesRevenueMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 272543000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 33088000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=goog:GoogleCloudMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 1527000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=us-gaap:AllOtherSegmentsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 146286000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 91038000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=us-gaap:EMEAMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 51514000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=srt:AsiaPacificMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 18320000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=goog:AmericasExcludingUnitedStatesMember"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 74100000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:ContractWithCustomerLiabilityRevenueRecognized",
+      "v": 2400000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 213000000.0,
+      "d": 365,
+      "dims": "us-gaap:DerivativeInstrumentRiskAxis=us-gaap:ForeignExchangeContractMember;us-gaap:ReclassificationOutOfAccumulatedOtherComprehensiveIncomeAxis=us-gaap:ReclassificationOutOfAccumulatedOtherComprehensiveIncomeMember;us-gaap:StatementEquityComponentsAxis=us-gaap:AccumulatedGainLossNetCashFlowHedgeParentMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 95858000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleServicesMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 1716000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleCloudMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": -4095000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=us-gaap:AllOtherSegmentsMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": -9186000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:CorporateNonSegmentMember"
+     }
+    ]
+   }
+  ]
+ },
+ "META": {
+  "filings_listed": 10,
+  "samples": [
+   {
+    "form": "10-Q",
+    "filed": "2026-10-22",
+    "report": "2026-09-30",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026066773/meta-20260930_htm.xml",
+    "status": 200,
+    "facts": 809,
+    "axes_by_concept": {
+     "meta:PaymentsToAcquireBusinessesNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets": [
+      ""
+     ],
+     "us-gaap:CostOfRevenue": [
+      ""
+     ],
+     "us-gaap:Depreciation": [
+      "",
+      "us-gaap:PropertyPlantAndEquipmentByTypeAxis"
+     ],
+     "us-gaap:DepreciationDepletionAndAmortization": [
+      ""
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:PaymentsToAcquireAvailableForSaleSecuritiesDebt": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAccumulatedDepreciationAndAmortization": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetBeforeAccumulatedDepreciationAndAmortization": [
+      ""
+     ],
+     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "",
+      "srt:ProductOrServiceAxis;us-gaap:StatementBusinessSegmentsAxis",
+      "srt:StatementGeographicalAxis",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 64601000000.0,
+      "d": 92,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:CostOfRevenue",
+      "v": 13369000000.0,
+      "d": 92,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 12988000000.0,
+      "d": 92,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 63061000000.0,
+      "d": 92,
+      "dims": "srt:ProductOrServiceAxis=us-gaap:AdvertisingMember;us-gaap:StatementBusinessSegmentsAxis=meta:FamilyOfAppsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 1097000000.0,
+      "d": 92,
+      "dims": "srt:ProductOrServiceAxis=us-gaap:ServiceOtherMember;us-gaap:StatementBusinessSegmentsAxis=meta:FamilyOfAppsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 64158000000.0,
+      "d": 92,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=meta:FamilyOfAppsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 443000000.0,
+      "d": 92,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=meta:RealityLabsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 26217000000.0,
+      "d": 92,
+      "dims": "srt:StatementGeographicalAxis=meta:USCanadaMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 14023000000.0,
+      "d": 92,
+      "dims": "srt:StatementGeographicalAxis=srt:EuropeMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 16993000000.0,
+      "d": 92,
+      "dims": "srt:StatementGeographicalAxis=srt:AsiaPacificMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 7368000000.0,
+      "d": 92,
+      "dims": "srt:StatementGeographicalAxis=meta:RestOfWorldMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 17117000000.0,
+      "d": 92,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=meta:FamilyOfAppsMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": -4129000000.0,
+      "d": 92,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=meta:RealityLabsMember"
+     }
+    ]
+   },
+   {
+    "form": "10-K",
+    "filed": "2026-01-29",
+    "report": "2025-12-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/1326801/000162828026003942/meta-20251231_htm.xml",
+    "status": 200,
+    "facts": 1040,
+    "axes_by_concept": {
+     "meta:PaymentsToAcquireBusinessesNetOfCashAcquiredAndPurchasesOfIntangibleAndOtherAssets": [
+      ""
+     ],
+     "us-gaap:CostOfRevenue": [
+      ""
+     ],
+     "us-gaap:Depreciation": [
+      "",
+      "us-gaap:ChangeInAccountingEstimateByTypeAxis",
+      "us-gaap:PropertyPlantAndEquipmentByTypeAxis"
+     ],
+     "us-gaap:DepreciationDepletionAndAmortization": [
+      ""
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:PaymentsToAcquireBusinessesGross": [
+      "us-gaap:BusinessAcquisitionAxis"
+     ],
+     "us-gaap:PaymentsToAcquireMarketableSecurities": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAccumulatedDepreciationAndAmortization": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetBeforeAccumulatedDepreciationAndAmortization": [
+      ""
+     ],
+     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "",
+      "srt:ProductOrServiceAxis;us-gaap:StatementBusinessSegmentsAxis",
+      "srt:StatementGeographicalAxis",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 200966000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:CostOfRevenue",
+      "v": 36175000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 83276000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 196175000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=us-gaap:AdvertisingMember;us-gaap:StatementBusinessSegmentsAxis=meta:FamilyOfAppsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 2584000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=us-gaap:ServiceOtherMember;us-gaap:StatementBusinessSegmentsAxis=meta:FamilyOfAppsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 198759000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=meta:FamilyOfAppsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 2207000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=meta:RealityLabsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 78866000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=meta:USCanadaMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 46569000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=srt:EuropeMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 53817000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=srt:AsiaPacificMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 21714000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=meta:RestOfWorldMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 74780000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 102469000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=meta:FamilyOfAppsMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": -19193000000.0,
+      "d": 365,
+      "dims": "us-gaap:StatementBusinessSegmentsAxis=meta:RealityLabsMember"
+     }
+    ]
+   }
+  ]
+ },
+ "ORCL": {
+  "filings_listed": 31,
+  "samples": [
+   {
+    "form": "10-Q",
+    "filed": "2026-09-11",
+    "report": "2026-08-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526389274/orcl-20260831_htm.xml",
+    "status": 200,
+    "facts": 533,
+    "axes_by_concept": {
+     "orcl:CloudRevenues": [
+      ""
+     ],
+     "orcl:HardwareRevenues": [
+      ""
+     ],
+     "orcl:IncreaseDecreaseInDeferredRevenuesFromCustomerPrepaymentsWithSignificantFinancingComponent": [
+      ""
+     ],
+     "orcl:IncreaseDecreaseInOtherDeferredRevenues": [
+      ""
+     ],
+     "orcl:SalesRevenueServicesNet1": [
+      ""
+     ],
+     "orcl:SoftwareRevenues": [
+      ""
+     ],
+     "us-gaap:AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:ContractWithCustomerLiabilityRevenueRecognized": [
+      ""
+     ],
+     "us-gaap:Depreciation": [
+      ""
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:PaymentsToAcquireInvestments": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis",
+      "srt:ProductOrServiceAxis",
+      "srt:StatementGeographicalAxis"
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      ""
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligationPercentage": [
+      "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "orcl:CloudRevenues",
+      "v": 11607000000.0,
+      "d": 92,
+      "dims": ""
+     },
+     {
+      "c": "orcl:SoftwareRevenues",
+      "v": 5550000000.0,
+      "d": 92,
+      "dims": ""
+     },
+     {
+      "c": "orcl:HardwareRevenues",
+      "v": 774000000.0,
+      "d": 92,
+      "dims": ""
+     },
+     {
+      "c": "orcl:SalesRevenueServicesNet1",
+      "v": 1414000000.0,
+      "d": 92,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 19345000000.0,
+      "d": 92,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 6728000000.0,
+      "d": 92,
+      "dims": ""
+     },
+     {
+      "c": "orcl:IncreaseDecreaseInDeferredRevenuesFromCustomerPrepaymentsWithSignificantFinancingComponent",
+      "v": 11363000000.0,
+      "d": 92,
+      "dims": ""
+     },
+     {
+      "c": "orcl:IncreaseDecreaseInOtherDeferredRevenues",
+      "v": 3997000000.0,
+      "d": 92,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:ContractWithCustomerLiabilityRevenueRecognized",
+      "v": 4000000000.0,
+      "d": 92,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 664000000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligationPercentage",
+      "v": 0.13,
+      "d": null,
+      "dims": "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2026-09-01"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligationPercentage",
+      "v": 0.37,
+      "d": null,
+      "dims": "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2027-09-01"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligationPercentage",
+      "v": 0.34,
+      "d": null,
+      "dims": "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2029-09-01"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 17157000000.0,
+      "d": 92,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:CloudAndSoftwareBusinessMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 9358000000.0,
+      "d": 92,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:CloudAndSoftwareBusinessMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 774000000.0,
+      "d": 92,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:HardwareBusinessMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 452000000.0,
+      "d": 92,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:HardwareBusinessMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 1414000000.0,
+      "d": 92,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:ServicesBusinessMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 445000000.0,
+      "d": 92,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:ServicesBusinessMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 19345000000.0,
+      "d": 92,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 10255000000.0,
+      "d": 92,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 13711000000.0,
+      "d": 92,
+      "dims": "srt:StatementGeographicalAxis=srt:AmericasMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 3726000000.0,
+      "d": 92,
+      "dims": "srt:StatementGeographicalAxis=us-gaap:EMEAMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 1908000000.0,
+      "d": 92,
+      "dims": "srt:StatementGeographicalAxis=srt:AsiaPacificMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 4219000000.0,
+      "d": 92,
+      "dims": "srt:ProductOrServiceAxis=orcl:CloudApplicationsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 7388000000.0,
+      "d": 92,
+      "dims": "srt:ProductOrServiceAxis=orcl:CloudInfrastructureMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 11607000000.0,
+      "d": 92,
+      "dims": "srt:ProductOrServiceAxis=orcl:CloudRevenuesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 655000000.0,
+      "d": 92,
+      "dims": "srt:ProductOrServiceAxis=orcl:SoftwareLicenseMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 4895000000.0,
+      "d": 92,
+      "dims": "srt:ProductOrServiceAxis=orcl:SoftwareSupportMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 5550000000.0,
+      "d": 92,
+      "dims": "srt:ProductOrServiceAxis=orcl:SoftwareRevenuesMember"
+     }
+    ]
+   },
+   {
+    "form": "10-K",
+    "filed": "2026-06-22",
+    "report": "2026-05-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526277521/orcl-20260531_htm.xml",
+    "status": 200,
+    "facts": 1724,
+    "axes_by_concept": {
+     "orcl:CloudRevenues": [
+      ""
+     ],
+     "orcl:HardwareRevenues": [
+      ""
+     ],
+     "orcl:IncreaseDecreaseInDeferredRevenuesFromCustomerPrepaymentsWithSignificantFinancingComponent": [
+      ""
+     ],
+     "orcl:IncreaseDecreaseInOtherDeferredRevenues": [
+      ""
+     ],
+     "orcl:SalesRevenueServicesNet1": [
+      ""
+     ],
+     "orcl:SoftwareRevenues": [
+      ""
+     ],
+     "us-gaap:AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:Depreciation": [
+      ""
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:PaymentsToAcquireInvestments": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis",
+      "srt:ProductOrServiceAxis",
+      "srt:StatementGeographicalAxis"
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      ""
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligationPercentage": [
+      "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis"
+     ],
+     "us-gaap:Revenues": [
+      "",
+      "srt:StatementGeographicalAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "orcl:CloudRevenues",
+      "v": 33989000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "orcl:SoftwareRevenues",
+      "v": 24541000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "orcl:HardwareRevenues",
+      "v": 3084000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "orcl:SalesRevenueServicesNet1",
+      "v": 5743000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 67357000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 20606000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "orcl:IncreaseDecreaseInDeferredRevenuesFromCustomerPrepaymentsWithSignificantFinancingComponent",
+      "v": 4592000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "orcl:IncreaseDecreaseInOtherDeferredRevenues",
+      "v": 50000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 638000000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligationPercentage",
+      "v": 0.12,
+      "d": null,
+      "dims": "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2026-06-01"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligationPercentage",
+      "v": 0.34,
+      "d": null,
+      "dims": "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2027-06-01"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligationPercentage",
+      "v": 0.34,
+      "d": null,
+      "dims": "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2029-06-01"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 58530000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:CloudAndSoftwareBusinessMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 34468000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:CloudAndSoftwareBusinessMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 3084000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:HardwareBusinessMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 2017000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:HardwareBusinessMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 5743000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:ServicesBusinessMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 1533000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:ServicesBusinessMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 67357000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 38018000000.0,
+      "d": 365,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 44478000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=srt:AmericasMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 15297000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=us-gaap:EMEAMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 7582000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=srt:AsiaPacificMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 4737000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=orcl:SoftwareLicenseMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 19804000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=orcl:SoftwareSupportMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 24541000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=orcl:SoftwareRevenuesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 15888000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=orcl:CloudApplicationsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 18101000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=orcl:CloudInfrastructureMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 33989000000.0,
+      "d": 365,
+      "dims": "srt:ProductOrServiceAxis=orcl:CloudRevenuesMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 39835000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 2816000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=country:GB"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 1993000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=country:DE"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 1870000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=country:JP"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 20843000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=orcl:OtherCountriesMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 67357000000.0,
+      "d": 365,
+      "dims": ""
+     }
+    ]
+   },
+   {
+    "form": "10-K",
+    "filed": "2024-06-20",
+    "report": "2024-05-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/1341439/000095017024075605/orcl-20240531_htm.xml",
+    "status": 200,
+    "facts": 1618,
+    "axes_by_concept": {
+     "orcl:CloudLicenseAndOnPremiseLicenseRevenue": [
+      ""
+     ],
+     "orcl:CloudServicesAndLicenseSupportRevenue": [
+      ""
+     ],
+     "orcl:HardwareRevenues": [
+      ""
+     ],
+     "orcl:SalesRevenueServicesNet1": [
+      ""
+     ],
+     "us-gaap:AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:ContractWithCustomerLiabilityRevenueRecognized": [
+      ""
+     ],
+     "us-gaap:Depreciation": [
+      ""
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireInvestments": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis",
+      "srt:ProductOrServiceAxis",
+      "srt:StatementGeographicalAxis"
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      ""
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligationPercentage": [
+      "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis"
+     ],
+     "us-gaap:Revenues": [
+      "",
+      "srt:StatementGeographicalAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "orcl:CloudServicesAndLicenseSupportRevenue",
+      "v": 39383000000.0,
+      "d": 366,
+      "dims": ""
+     },
+     {
+      "c": "orcl:CloudLicenseAndOnPremiseLicenseRevenue",
+      "v": 5081000000.0,
+      "d": 366,
+      "dims": ""
+     },
+     {
+      "c": "orcl:HardwareRevenues",
+      "v": 3066000000.0,
+      "d": 366,
+      "dims": ""
+     },
+     {
+      "c": "orcl:SalesRevenueServicesNet1",
+      "v": 5431000000.0,
+      "d": 366,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 52961000000.0,
+      "d": 366,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 15353000000.0,
+      "d": 366,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:ContractWithCustomerLiabilityRevenueRecognized",
+      "v": 9000000000.0,
+      "d": 366,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 97900000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligationPercentage",
+      "v": 0.39,
+      "d": null,
+      "dims": "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2024-06-01"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligationPercentage",
+      "v": 0.36,
+      "d": null,
+      "dims": "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2025-06-01"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligationPercentage",
+      "v": 0.19,
+      "d": null,
+      "dims": "us-gaap:RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionStartDateAxis=2026-06-01"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 44464000000.0,
+      "d": 366,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:CloudAndLicenseBusinessMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 28514000000.0,
+      "d": 366,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:CloudAndLicenseBusinessMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 3066000000.0,
+      "d": 366,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:HardwareBusinessMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 1915000000.0,
+      "d": 366,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:HardwareBusinessMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 5431000000.0,
+      "d": 366,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:ServicesBusinessMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 916000000.0,
+      "d": 366,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=orcl:ServicesBusinessMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 52961000000.0,
+      "d": 366,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 31345000000.0,
+      "d": 366,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 33122000000.0,
+      "d": 366,
+      "dims": "srt:StatementGeographicalAxis=srt:AmericasMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 13030000000.0,
+      "d": 366,
+      "dims": "srt:StatementGeographicalAxis=us-gaap:EMEAMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 6809000000.0,
+      "d": 366,
+      "dims": "srt:StatementGeographicalAxis=srt:AsiaPacificMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 19774000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=orcl:CloudServicesMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 19609000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=orcl:LicenseSupportMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 39383000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=orcl:CloudServicesAndLicenseSupportMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 18172000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=orcl:ApplicationsCloudServicesAndLicenseSupportMember"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 21211000000.0,
+      "d": 366,
+      "dims": "srt:ProductOrServiceAxis=orcl:InfrastructureCloudServicesAndLicenseSupportMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 29055000000.0,
+      "d": 366,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 2423000000.0,
+      "d": 366,
+      "dims": "srt:StatementGeographicalAxis=country:GB"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 1794000000.0,
+      "d": 366,
+      "dims": "srt:StatementGeographicalAxis=country:DE"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 1662000000.0,
+      "d": 366,
+      "dims": "srt:StatementGeographicalAxis=country:JP"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 18027000000.0,
+      "d": 366,
+      "dims": "srt:StatementGeographicalAxis=orcl:OtherCountriesMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 52961000000.0,
+      "d": 366,
+      "dims": ""
+     }
+    ]
+   }
+  ]
+ },
+ "CRWV": {
+  "filings_listed": 4,
+  "samples": [
+   {
+    "form": "10-Q",
+    "filed": "2026-08-12",
+    "report": "2026-06-30",
+    "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000366/crwv-20260630_htm.xml",
+    "status": 200,
+    "facts": 1100,
+    "axes_by_concept": {
+     "crwv:PaymentsToAcquireStrategicInvestments": [
+      ""
+     ],
+     "us-gaap:AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:ContractWithCustomerLiabilityRevenueRecognized": [
+      ""
+     ],
+     "us-gaap:Depreciation": [
+      ""
+     ],
+     "us-gaap:DepreciationDepletionAndAmortization": [
+      ""
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireInterestInJointVenture": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireNotesReceivable": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization": [
+      ""
+     ],
+     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "",
+      "srt:StatementGeographicalAxis"
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      ""
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 2575000000.0,
+      "d": 91,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": -49000000.0,
+      "d": 91,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 103700000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 2389000000.0,
+      "d": 91,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 186000000.0,
+      "d": 91,
+      "dims": "srt:StatementGeographicalAxis=us-gaap:NonUsMember"
+     }
+    ]
+   },
+   {
+    "form": "10-K",
+    "filed": "2026-03-02",
+    "report": "2025-12-31",
+    "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000104/crwv-20251231_htm.xml",
+    "status": 200,
+    "facts": 1313,
+    "axes_by_concept": {
+     "us-gaap:AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:ContractWithCustomerLiabilityRevenueRecognized": [
+      ""
+     ],
+     "us-gaap:Depreciation": [
+      ""
+     ],
+     "us-gaap:DepreciationDepletionAndAmortization": [
+      ""
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireBusinessesGross": [
+      "us-gaap:BusinessAcquisitionAxis"
+     ],
+     "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireMarketableSecurities": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireNotesReceivable": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:PropertyPlantAndEquipmentAndFinanceLeaseRightOfUseAssetAfterAccumulatedDepreciationAndAmortization": [
+      ""
+     ],
+     "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": [
+      "",
+      "srt:StatementGeographicalAxis"
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      ""
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 5131000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": -46000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:ContractWithCustomerLiabilityRevenueRecognized",
+      "v": 780000000.0,
+      "d": 365,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 60700000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 4801000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "v": 330000000.0,
+      "d": 365,
+      "dims": "srt:StatementGeographicalAxis=us-gaap:NonUsMember"
+     }
+    ]
+   }
+  ]
+ },
+ "NVDA": {
+  "filings_listed": 24,
+  "samples": [
+   {
+    "form": "10-Q",
+    "filed": "2026-08-26",
+    "report": "2026-07-26",
+    "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726_htm.xml",
+    "status": 200,
+    "facts": 910,
+    "axes_by_concept": {
+     "nvda:ContractWithCustomerLiabilityRevenueRecognizedFromCustomerAdvances": [
+      ""
+     ],
+     "nvda:ContractWithCustomerLiabilityRevenueRecognizedOpeningBalanceAndCurrentPeriodAdditions": [
+      ""
+     ],
+     "nvda:PaymentsToAcquireEquitySecurities": [
+      ""
+     ],
+     "nvda:RevenueRemainingPerformanceObligationContractWithCustomerLiabilityAmount": [
+      ""
+     ],
+     "us-gaap:ContractWithCustomerLiabilityRevenueRecognized": [
+      ""
+     ],
+     "us-gaap:CostOfRevenue": [
+      "",
+      "us-gaap:NatureOfExpenseAxis"
+     ],
+     "us-gaap:DepreciationDepletionAndAmortization": [
+      "",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:PaymentsToAcquireAvailableForSaleSecuritiesDebt": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireProductiveAssets": [
+      ""
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      ""
+     ],
+     "us-gaap:Revenues": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis",
+      "srt:ProductOrServiceAxis",
+      "srt:StatementGeographicalAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "us-gaap:Revenues",
+      "v": 96221000000.0,
+      "d": 91,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:CostOfRevenue",
+      "v": 24079000000.0,
+      "d": 91,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 63734000000.0,
+      "d": 91,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:CostOfRevenue",
+      "v": 201000000.0,
+      "d": 91,
+      "dims": "us-gaap:NatureOfExpenseAxis=nvda:InventoryPurchaseObligationsInExcessOfProjectionsMember"
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 3200000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "nvda:RevenueRemainingPerformanceObligationContractWithCustomerLiabilityAmount",
+      "v": 3000000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 88299000000.0,
+      "d": 91,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=nvda:ComputeAndNetworkingSegmentMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 7922000000.0,
+      "d": 91,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=nvda:GraphicsSegmentMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 96221000000.0,
+      "d": 91,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 62696000000.0,
+      "d": 91,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=nvda:ComputeAndNetworkingSegmentMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 3899000000.0,
+      "d": 91,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=nvda:GraphicsSegmentMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 66595000000.0,
+      "d": 91,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 66595000000.0,
+      "d": 91,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:CorporateNonSegmentMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 60074000000.0,
+      "d": 91,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 26985000000.0,
+      "d": 91,
+      "dims": "srt:StatementGeographicalAxis=country:TW"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 7880000000.0,
+      "d": 91,
+      "dims": "srt:StatementGeographicalAxis=nvda:ChinaIncludingHongKongMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 1282000000.0,
+      "d": 91,
+      "dims": "srt:StatementGeographicalAxis=nvda:OtherCountriesMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 89023000000.0,
+      "d": 91,
+      "dims": "srt:ProductOrServiceAxis=nvda:DataCenterMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 48710000000.0,
+      "d": 91,
+      "dims": "srt:ProductOrServiceAxis=nvda:HyperscaleMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 40313000000.0,
+      "d": 91,
+      "dims": "srt:ProductOrServiceAxis=nvda:AICloudsIndustrialEnterpriseMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 7198000000.0,
+      "d": 91,
+      "dims": "srt:ProductOrServiceAxis=nvda:EdgeComputingMember"
+     }
+    ]
+   },
+   {
+    "form": "10-K",
+    "filed": "2026-02-25",
+    "report": "2026-01-25",
+    "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000021/nvda-20260125_htm.xml",
+    "status": 200,
+    "facts": 1042,
+    "axes_by_concept": {
+     "nvda:ContractWithCustomerLiabilityRevenueRecognizedFromCustomerAdvances": [
+      ""
+     ],
+     "nvda:ContractWithCustomerLiabilityRevenueRecognizedOpeningBalanceAndCurrentPeriodAdditions": [
+      ""
+     ],
+     "nvda:RevenueRemainingPerformanceObligationContractWithCustomerLiabilityAmount": [
+      ""
+     ],
+     "us-gaap:AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:ContractWithCustomerLiabilityRevenueRecognized": [
+      ""
+     ],
+     "us-gaap:CostOfRevenue": [
+      "",
+      "us-gaap:NatureOfExpenseAxis"
+     ],
+     "us-gaap:Depreciation": [
+      ""
+     ],
+     "us-gaap:DepreciationDepletionAndAmortization": [
+      "",
+      "us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis"
+     ],
+     "us-gaap:PaymentsToAcquireAvailableForSaleSecuritiesDebt": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireBusinessTwoNetOfCashAcquired": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireEquitySecuritiesFvNi": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireProductiveAssets": [
+      ""
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      ""
+     ],
+     "us-gaap:Revenues": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis",
+      "srt:ProductOrServiceAxis",
+      "srt:StatementGeographicalAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "us-gaap:Revenues",
+      "v": 215938000000.0,
+      "d": 364,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:CostOfRevenue",
+      "v": 62475000000.0,
+      "d": 364,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 130387000000.0,
+      "d": 364,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:CostOfRevenue",
+      "v": 3200000000.0,
+      "d": 364,
+      "dims": "us-gaap:NatureOfExpenseAxis=nvda:InventoryPurchaseObligationsInExcessOfProjectionsMember"
+     },
+     {
+      "c": "nvda:ContractWithCustomerLiabilityRevenueRecognizedOpeningBalanceAndCurrentPeriodAdditions",
+      "v": 10378000000.0,
+      "d": 364,
+      "dims": ""
+     },
+     {
+      "c": "nvda:ContractWithCustomerLiabilityRevenueRecognizedFromCustomerAdvances",
+      "v": 8900000000.0,
+      "d": 364,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:ContractWithCustomerLiabilityRevenueRecognized",
+      "v": 974000000.0,
+      "d": 364,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 2300000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "nvda:RevenueRemainingPerformanceObligationContractWithCustomerLiabilityAmount",
+      "v": 1900000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 193479000000.0,
+      "d": 364,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=nvda:ComputeAndNetworkingSegmentMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 22459000000.0,
+      "d": 364,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=nvda:GraphicsSegmentMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 215938000000.0,
+      "d": 364,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 130141000000.0,
+      "d": 364,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=nvda:ComputeAndNetworkingSegmentMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 9156000000.0,
+      "d": 364,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=nvda:GraphicsSegmentMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 139297000000.0,
+      "d": 364,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 139297000000.0,
+      "d": 364,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:CorporateNonSegmentMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 149617000000.0,
+      "d": 364,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 42345000000.0,
+      "d": 364,
+      "dims": "srt:StatementGeographicalAxis=country:TW"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 19677000000.0,
+      "d": 364,
+      "dims": "srt:StatementGeographicalAxis=nvda:ChinaIncludingHongKongMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 4299000000.0,
+      "d": 364,
+      "dims": "srt:StatementGeographicalAxis=nvda:OtherCountriesMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 193737000000.0,
+      "d": 364,
+      "dims": "srt:ProductOrServiceAxis=nvda:DataCenterMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 162361000000.0,
+      "d": 364,
+      "dims": "srt:ProductOrServiceAxis=nvda:ComputeMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 31376000000.0,
+      "d": 364,
+      "dims": "srt:ProductOrServiceAxis=nvda:NetworkingMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 16042000000.0,
+      "d": 364,
+      "dims": "srt:ProductOrServiceAxis=nvda:GamingMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 3191000000.0,
+      "d": 364,
+      "dims": "srt:ProductOrServiceAxis=nvda:ProfessionalVisualizationMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 2349000000.0,
+      "d": 364,
+      "dims": "srt:ProductOrServiceAxis=nvda:AutomotiveMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 619000000.0,
+      "d": 364,
+      "dims": "srt:ProductOrServiceAxis=nvda:OEMAndOtherMember"
+     }
+    ]
+   },
+   {
+    "form": "10-K",
+    "filed": "2024-02-21",
+    "report": "2024-01-28",
+    "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581024000029/nvda-20240128_htm.xml",
+    "status": 200,
+    "facts": 1102,
+    "axes_by_concept": {
+     "nvda:ContractWithCustomerLiabilityRevenueRecognizedOpeningBalanceAndCurrentPeriodAdditions": [
+      ""
+     ],
+     "us-gaap:AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment": [
+      ""
+     ],
+     "us-gaap:ContractWithCustomerLiabilityRevenueRecognized": [
+      ""
+     ],
+     "us-gaap:CostOfRevenue": [
+      "",
+      "us-gaap:ChangeInAccountingEstimateByTypeAxis",
+      "us-gaap:NatureOfExpenseAxis"
+     ],
+     "us-gaap:Depreciation": [
+      ""
+     ],
+     "us-gaap:DepreciationDepletionAndAmortization": [
+      ""
+     ],
+     "us-gaap:OperatingIncomeLoss": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis",
+      "us-gaap:ChangeInAccountingEstimateByTypeAxis"
+     ],
+     "us-gaap:PaymentsToAcquireAvailableForSaleSecuritiesDebt": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireBusinessesNetOfCashAcquired": [
+      ""
+     ],
+     "us-gaap:PaymentsToAcquireProductiveAssets": [
+      ""
+     ],
+     "us-gaap:RevenueRemainingPerformanceObligation": [
+      ""
+     ],
+     "us-gaap:Revenues": [
+      "",
+      "srt:ConsolidationItemsAxis",
+      "srt:ConsolidationItemsAxis;us-gaap:StatementBusinessSegmentsAxis",
+      "srt:ProductOrServiceAxis",
+      "srt:StatementGeographicalAxis"
+     ]
+    },
+    "facts_at_period_end": [
+     {
+      "c": "us-gaap:Revenues",
+      "v": 60922000000.0,
+      "d": 364,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:CostOfRevenue",
+      "v": 16621000000.0,
+      "d": 364,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 32972000000.0,
+      "d": 364,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:CostOfRevenue",
+      "v": -33000000.0,
+      "d": 91,
+      "dims": "us-gaap:ChangeInAccountingEstimateByTypeAxis=us-gaap:ServiceLifeMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 135000000.0,
+      "d": 91,
+      "dims": "us-gaap:ChangeInAccountingEstimateByTypeAxis=us-gaap:ServiceLifeMember"
+     },
+     {
+      "c": "us-gaap:CostOfRevenue",
+      "v": 1400000000.0,
+      "d": 364,
+      "dims": "us-gaap:NatureOfExpenseAxis=nvda:InventoryPurchaseObligationsInExcessOfProjectionsMember"
+     },
+     {
+      "c": "nvda:ContractWithCustomerLiabilityRevenueRecognizedOpeningBalanceAndCurrentPeriodAdditions",
+      "v": 1273000000.0,
+      "d": 364,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:ContractWithCustomerLiabilityRevenueRecognized",
+      "v": 338000000.0,
+      "d": 364,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:RevenueRemainingPerformanceObligation",
+      "v": 1100000000.0,
+      "d": null,
+      "dims": ""
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 47405000000.0,
+      "d": 364,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=nvda:ComputeAndNetworkingMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 13517000000.0,
+      "d": 364,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=nvda:GraphicsMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 0.0,
+      "d": 364,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:CorporateNonSegmentMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 32016000000.0,
+      "d": 364,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=nvda:ComputeAndNetworkingMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": 5846000000.0,
+      "d": 364,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;us-gaap:StatementBusinessSegmentsAxis=nvda:GraphicsMember"
+     },
+     {
+      "c": "us-gaap:OperatingIncomeLoss",
+      "v": -4890000000.0,
+      "d": 364,
+      "dims": "srt:ConsolidationItemsAxis=us-gaap:CorporateNonSegmentMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 26966000000.0,
+      "d": 364,
+      "dims": "srt:StatementGeographicalAxis=country:US"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 13405000000.0,
+      "d": 364,
+      "dims": "srt:StatementGeographicalAxis=country:TW"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 10306000000.0,
+      "d": 364,
+      "dims": "srt:StatementGeographicalAxis=nvda:ChinaIncludingHongKongMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 10245000000.0,
+      "d": 364,
+      "dims": "srt:StatementGeographicalAxis=nvda:OtherCountriesMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 47525000000.0,
+      "d": 364,
+      "dims": "srt:ProductOrServiceAxis=nvda:DataCenterMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 10447000000.0,
+      "d": 364,
+      "dims": "srt:ProductOrServiceAxis=nvda:GamingMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 1553000000.0,
+      "d": 364,
+      "dims": "srt:ProductOrServiceAxis=nvda:ProfessionalVisualizationMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 1091000000.0,
+      "d": 364,
+      "dims": "srt:ProductOrServiceAxis=nvda:AutomotiveMember"
+     },
+     {
+      "c": "us-gaap:Revenues",
+      "v": 306000000.0,
+      "d": 364,
+      "dims": "srt:ProductOrServiceAxis=nvda:OEMAndOtherMember"
+     }
+    ]
+   }
+  ]
+ }
+}
