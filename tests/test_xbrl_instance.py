@@ -38,3 +38,27 @@ def test_instance_filename_and_filing_list():
                                    "reportDate": ["2025-09-30", "", "2017-12-31"],
                                    "primaryDocument": ["x.htm", "y.htm", "z.htm"], "isInlineXBRL": [1, 0, 0]}}}
     assert list(recent_periodic_filings(subs).accessionNumber) == ["a"]
+
+
+def test_extract_series_matches_ignoring_prefixes_and_consolidation_axis():
+    from ai_capital_cycle.segments import extract_series
+    inst = pd.DataFrame([
+        dict(concept="us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax", value=24.77e9,
+             start=pd.Timestamp("2026-04-01"), end=pd.Timestamp("2026-06-30"), unit="usd",
+             dims="us-gaap:StatementBusinessSegmentsAxis=goog:GoogleCloudMember", context="a"),
+        dict(concept="us-gaap:OperatingIncomeLoss", value=8.81e9, start=pd.Timestamp("2026-04-01"),
+             end=pd.Timestamp("2026-06-30"), unit="usd", context="b",
+             dims="srt:ConsolidationItemsAxis=us-gaap:OperatingSegmentsMember;"
+                  "us-gaap:StatementBusinessSegmentsAxis=goog:GoogleCloudMember"),
+        dict(concept="us-gaap:RevenueRemainingPerformanceObligation", value=513.9e9, start=pd.NaT,
+             end=pd.Timestamp("2026-06-30"), unit="usd", context="c",
+             dims="us-gaap:StatementBusinessSegmentsAxis=goog:GoogleCloudMember"),
+        dict(concept="us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax", value=1e9,
+             start=pd.Timestamp("2026-04-01"), end=pd.Timestamp("2026-06-30"), unit="usd", context="d",
+             dims="srt:StatementGeographicalAxis=country:US;us-gaap:StatementBusinessSegmentsAxis=goog:GoogleCloudMember"),
+    ])
+    out = extract_series(inst, "GOOGL").set_index("series")
+    assert out.loc["google_cloud_revenue", "value_usd"] == 24.77e9      # geographic split excluded
+    assert out.loc["google_cloud_operating_income", "value_usd"] == 8.81e9
+    assert out.loc["google_cloud_backlog", "value_usd"] == 513.9e9
+    assert len(out) == 3
