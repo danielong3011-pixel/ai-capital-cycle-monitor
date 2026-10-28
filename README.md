@@ -15,6 +15,17 @@ Microsoft, Amazon, Alphabet, Meta, Oracle and CoreWeave, with Nvidia as a suppli
 - Point-in-time view: rebuild any reading from only the filings available on a past date.
 - Full provenance: every quarterly figure links to the SEC filing it came from.
 
+**Demand (Module B)** asks whether that CapEx is backed by customer demand, using segment data read
+from each filing's full XBRL document:
+- Cloud revenue, growth and operating margin for AWS, Google Cloud, Microsoft Intelligent Cloud,
+  Oracle Cloud Infrastructure and CoreWeave.
+- Revenue per dollar of CapEx, and new revenue and new operating profit per dollar of lagged CapEx
+  (a rough incremental return), with an adjustable lag.
+- Signed future contracts (accounting term: backlog) and future contracts per $ of CapEx.
+- Value-chain layers side by side, never summed: Nvidia Data Center revenue (supplier), cloud revenue
+  (compute providers) and OpenAI's revenue as disclosed in Microsoft's 10-K (AI model company).
+- Meta shown separately as AI used in-house: ad revenue growth against CapEx growth.
+
 **Project model** (version 0.1) is an illustrative single-project DCF with sensitivity and
 Monte Carlo scenarios, plus a CSV aggregator for your own documented observations.
 
@@ -29,7 +40,8 @@ SEC_USER_AGENT="Your Name you@example.com" python scripts/refresh_sec_data.py
 ```
 
 The company list and the XBRL tags used for each line item are in
-`src/ai_capital_cycle/universe.py`. The full method is in the app's **Method & data** tab.
+`src/ai_capital_cycle/universe.py`; the segment series are defined in `src/ai_capital_cycle/segments.py` and
+downloaded incrementally into `data/sec_segments.csv` by `scripts/refresh_segment_data.py`. The full method is in the app's **Method & data** tab.
 
 ## Important limitations
 Reported CapEx is total company investment, not AI-only (Amazon's includes retail logistics).
@@ -58,7 +70,7 @@ python -m pytest -q
 `ai_capex_share` must be in [0, 1]. It is an estimate unless a credible disclosure directly supports it. Record full source URLs and reporting periods in a future data-provenance version. Never treat an illustrative share as a reported fact.
 
 ## Planned next steps
-1. End-customer AI revenue ledger that separates final demand from intermediate transactions.
+1. Customer concentration: how much backlog depends on a few AI labs and how those labs are funded.
 2. Incremental ROIC, asset cohorts and replacement-cycle modelling.
 3. Wider coverage (semiconductors, neoclouds, 20-F filers) and finance-lease-adjusted CapEx.
 4. Historical validation with point-in-time vintages and stress tests.

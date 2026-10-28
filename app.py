@@ -10,16 +10,19 @@ if _SRC.is_dir() and str(_SRC) not in sys.path:
 
 import streamlit as st  # noqa: E402
 
-from views import capital_cycle, method, project_model  # noqa: E402
+from views import capital_cycle, demand_view, method, project_model  # noqa: E402
 
 st.set_page_config(page_title="AI Capital Cycle Monitor", layout="wide")
 st.title("AI Capital Cycle Monitor")
 st.caption("Independent quantitative research on the financial sustainability of AI infrastructure "
            "investment · not investment advice")
 
-tab_capital, tab_model, tab_method = st.tabs(["Capital cycle", "Project model", "Method & data"])
+tab_capital, tab_demand, tab_model, tab_method = st.tabs(
+    ["Capital cycle", "Demand", "Project model", "Method & data"])
 with tab_capital:
     capital_cycle.render()
+with tab_demand:
+    demand_view.render()
 with tab_model:
     project_model.render()
 with tab_method:
