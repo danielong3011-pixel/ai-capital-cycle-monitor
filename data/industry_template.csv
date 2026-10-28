@@ -1,0 +1,5 @@
+year,company,segment,capex_usd_bn,operating_cash_flow_usd_bn,source,ai_capex_share,ai_capex_share_basis
+2025,Example Cloud A,cloud,80,95,HYPOTHETICAL - REPLACE,0.6,illustrative assumption
+2025,Example Cloud B,cloud,65,75,HYPOTHETICAL - REPLACE,0.5,illustrative assumption
+2026,Example Cloud A,cloud,110,105,HYPOTHETICAL - REPLACE,0.7,illustrative assumption
+2026,Example Cloud B,cloud,90,85,HYPOTHETICAL - REPLACE,0.6,illustrative assumption
