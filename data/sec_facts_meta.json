@@ -1,12 +1,12 @@
 {
   "source": "SEC EDGAR XBRL companyfacts API (data.sec.gov)",
-  "retrieved_utc": "2026-10-28T14:28:59Z",
-  "latest_filing_date": "2026-10-22",
-  "rows": 5421,
+  "retrieved_utc": "2026-11-02T15:43:52Z",
+  "latest_filing_date": "2026-10-30",
+  "rows": 5509,
   "companies": {
-    "MSFT": 977,
-    "AMZN": 1417,
-    "GOOGL": 614,
+    "MSFT": 993,
+    "AMZN": 1467,
+    "GOOGL": 636,
     "META": 784,
     "ORCL": 781,
     "CRWV": 117,
