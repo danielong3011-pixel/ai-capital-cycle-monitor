@@ -233,6 +233,7 @@ CRWV,coreweave_backlog,us-gaap:RevenueRemainingPerformanceObligation,,,2025-09-3
 CRWV,coreweave_backlog,us-gaap:RevenueRemainingPerformanceObligation,,,2025-12-31,60700000000.0,0001769628-26-000104,10-K,2026-03-02
 CRWV,coreweave_backlog,us-gaap:RevenueRemainingPerformanceObligation,,,2026-03-31,98800000000.0,0001769628-26-000222,10-Q,2026-05-08
 CRWV,coreweave_backlog,us-gaap:RevenueRemainingPerformanceObligation,,,2026-06-30,103700000000.0,0001769628-26-000366,10-Q,2026-08-12
+CRWV,coreweave_backlog,us-gaap:RevenueRemainingPerformanceObligation,,,2026-09-30,132300000000.0,0001769628-26-000465,10-Q,2026-11-12
 CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2023-01-01,2023-12-31,229000000.0,0001769628-26-000104,10-K,2026-03-02
 CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2024-01-01,2024-03-31,188684000.0,0001769628-25-000014,10-Q,2025-05-15
 CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2024-01-01,2024-06-30,584055000.0,0001769628-25-000041,10-Q,2025-08-13
@@ -247,11 +248,15 @@ CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedT
 CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2025-04-01,2025-06-30,1212788000.0,0001769628-25-000041,10-Q,2025-08-13
 CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2025-04-01,2025-06-30,1212000000.0,0001769628-26-000366,10-Q,2026-08-12
 CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2025-01-01,2025-09-30,3559096000.0,0001769628-25-000062,10-Q,2025-11-13
+CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2025-01-01,2025-09-30,3559000000.0,0001769628-26-000465,10-Q,2026-11-12
 CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2025-07-01,2025-09-30,1364676000.0,0001769628-25-000062,10-Q,2025-11-13
+CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2025-07-01,2025-09-30,1365000000.0,0001769628-26-000465,10-Q,2026-11-12
 CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2025-01-01,2025-12-31,5131000000.0,0001769628-26-000104,10-K,2026-03-02
 CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2026-01-01,2026-03-31,2078000000.0,0001769628-26-000222,10-Q,2026-05-08
 CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2026-01-01,2026-06-30,4653000000.0,0001769628-26-000366,10-Q,2026-08-12
 CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2026-04-01,2026-06-30,2575000000.0,0001769628-26-000366,10-Q,2026-08-12
+CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2026-01-01,2026-09-30,8314000000.0,0001769628-26-000465,10-Q,2026-11-12
+CRWV,coreweave_revenue,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,,2026-07-01,2026-09-30,3661000000.0,0001769628-26-000465,10-Q,2026-11-12
 GOOGL,google_backlog,us-gaap:RevenueRemainingPerformanceObligation,,,2019-12-31,11400000000.0,0001652044-20-000008,10-K,2020-02-04
 GOOGL,google_backlog,us-gaap:RevenueRemainingPerformanceObligation,,,2020-03-31,12800000000.0,0001652044-20-000021,10-Q,2020-04-29
 GOOGL,google_backlog,us-gaap:RevenueRemainingPerformanceObligation,,,2020-06-30,14800000000.0,0001652044-20-000032,10-Q,2020-07-31
